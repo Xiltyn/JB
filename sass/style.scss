@@ -1,0 +1,109 @@
+$arkhip: 'arkhipregular', Arial, sans-serif;
+$big-text: 62rem;
+$base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+$base-grey: #232323;
+$base-blue: #0075a9;
+$base-red: #dc4716;
+
+body {
+  background: $base-grey;
+}
+
+#main {
+  .row{
+    position: absolute;
+    width: 100%;
+    margin-top: 5rem;
+    .main-element {
+      .half {
+        transition: 0.5s;
+        .big-letter {
+          font-family: $arkhip;
+          font-size: $big-text;
+          color: $base-grey;
+          text-shadow: $base-text-shadow;
+        }
+        .big-j {
+          letter-spacing: -55px;
+          transition: 0.5s;
+        }
+        .big-b {
+          margin-left: -55px;
+        }
+        .header {
+          font-family: $arkhip;
+          color: $base-grey;
+          text-shadow: $base-text-shadow;
+          margin-top: 60rem;
+        }
+        .header--webdev {
+          padding-right: 15px;
+        }
+        .header--calligrapher {
+          padding-left: 15px;
+        }
+     }
+      .main-left {
+        z-index: 200;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: 98% 97%;
+        transition: 0.5s;
+      }
+      .main-right {
+        z-index: 250;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: 3% 100%;
+        transition: 0.5s;
+
+      }
+    }
+    .main-element--hover {
+      .half {
+        .big-j {
+          mix-blend-mode: screen;
+          opacity:0.5;
+          transition: 0.5s;
+        }
+        .big-b {
+          mix-blend-mode: screen;
+          opacity:0.5;
+          transition: 0.5s;
+        }
+        .header--webdev {
+          color: $base-blue;
+          transition: 0.5s;
+        }
+      .header--calligrapher {
+          color: $base-red;
+          transition: 0.5s;
+        }
+      }
+      .main-left {
+        background-image: url('img/j.png');
+        transition: 0.5s;
+      }
+      .main-right {
+        background-image: url('img/b.png');
+        background-repeat: no-repeat;
+        background-position: 3% 100%;
+        transition: 0.5s;
+      }
+    }
+    .main-element--click {
+      .half {
+        .big-j {
+          mix-blend-mode: overlay;
+          opacity: 0.8;
+          transition: 0.5s;
+        }
+        .big-b {
+          mix-blend-mode: overlay;
+          opacity: 0.8;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
