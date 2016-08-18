@@ -1,15 +1,20 @@
 $arkhip: 'arkhipregular', Arial, sans-serif;
 $big-text: 62rem;
+$header: 10rem;
+$subheader: 7rem;
+$focus-text: 2rem;
 $base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 $base-grey: #232323;
 $base-blue: #0075a9;
 $base-red: #dc4716;
 
 body {
-  background: $base-grey;
+  background: $base-blue;
+  font-family: $arkhip;
+  color: #fff;
 }
 
-#main {
+#jb {
   .row{
     position: absolute;
     width: 100%;
@@ -18,7 +23,6 @@ body {
       .half {
         transition: 0.5s;
         .big-letter {
-          font-family: $arkhip;
           font-size: $big-text;
           color: $base-grey;
           text-shadow: $base-text-shadow;
@@ -31,7 +35,6 @@ body {
           margin-left: -55px;
         }
         .header {
-          font-family: $arkhip;
           color: $base-grey;
           text-shadow: $base-text-shadow;
           margin-top: 60rem;
@@ -51,7 +54,7 @@ body {
         transition: 0.5s;
       }
       .main-right {
-        z-index: 250;
+        z-index: 190;
         background-image: none;
         background-repeat: no-repeat;
         background-position: 3% 100%;
@@ -106,4 +109,78 @@ body {
       }
     }
   }
+}
+
+#header {
+  background-image: url('img/header_pic.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  height: 1300px;
+  .header-top {
+    background-image: url('img/header_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 60vh;
+    &--left {
+      .text-center {
+        padding-top: 10%;
+      }
+    }
+    &--middle {
+      padding-top: 15px;
+      &-avatar {
+        margin: auto;
+        width: 100%;
+      }
+    }
+    &--right {
+      .text-center {
+        padding-top: 9%;
+      }
+    }
+  }
+}
+
+#overview {
+  margin-top: -500px;
+  padding-top: 1000px;
+  min-height: 2000px;
+  background: none;
+  background-image: url('img/overview_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  .overview-text {
+    h2 {
+      font-size: $subheader;
+      padding: 25px 0;
+    }
+    p {
+      font-size: $focus-text;
+    }
+  }
+}
+
+#skills {
+  min-height: 3000px;
+  background-image: url('img/skills_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+  .skills-header {
+    h2 {
+      font-size: $header;
+    }
+  }
+}
+
+
+
+.separator {
+  height: 20px;
+  width: 100%;
+  background-image: url('img/separator.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 75px 0;
 }
