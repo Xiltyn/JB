@@ -15,6 +15,9 @@ body {
 }
 
 #jb {
+  background: $base-grey;
+  width: 100vw;
+  height: 100vh;
   .row{
     position: absolute;
     width: 100%;

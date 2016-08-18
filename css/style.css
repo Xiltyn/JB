@@ -3,71 +3,75 @@ body {
   font-family: "arkhipregular", Arial, sans-serif;
   color: #fff; }
 
-#jb .row {
-  position: absolute;
-  width: 100%;
-  margin-top: 5rem; }
-  #jb .row .main-element .half {
-    transition: 0.5s; }
-    #jb .row .main-element .half .big-letter {
-      font-size: 62rem;
-      color: #232323;
-      text-shadow: 0px 0px 20px black; }
-    #jb .row .main-element .half .big-j {
-      letter-spacing: -55px;
+#jb {
+  background: #232323;
+  width: 100vw;
+  height: 100vh; }
+  #jb .row {
+    position: absolute;
+    width: 100%;
+    margin-top: 5rem; }
+    #jb .row .main-element .half {
       transition: 0.5s; }
-    #jb .row .main-element .half .big-b {
-      margin-left: -55px; }
-    #jb .row .main-element .half .header {
-      color: #232323;
-      text-shadow: 0px 0px 20px black;
-      margin-top: 60rem; }
-    #jb .row .main-element .half .header--webdev {
-      padding-right: 15px; }
-    #jb .row .main-element .half .header--calligrapher {
-      padding-left: 15px; }
-  #jb .row .main-element .main-left {
-    z-index: 200;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: 98% 97%;
-    transition: 0.5s; }
-  #jb .row .main-element .main-right {
-    z-index: 190;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: 3% 100%;
-    transition: 0.5s; }
-  #jb .row .main-element--hover .half .big-j {
-    mix-blend-mode: screen;
-    opacity: 0.5;
-    transition: 0.5s; }
-  #jb .row .main-element--hover .half .big-b {
-    mix-blend-mode: screen;
-    opacity: 0.5;
-    transition: 0.5s; }
-  #jb .row .main-element--hover .half .header--webdev {
-    color: #0075a9;
-    transition: 0.5s; }
-  #jb .row .main-element--hover .half .header--calligrapher {
-    color: #dc4716;
-    transition: 0.5s; }
-  #jb .row .main-element--hover .main-left {
-    background-image: url("img/j.png");
-    transition: 0.5s; }
-  #jb .row .main-element--hover .main-right {
-    background-image: url("img/b.png");
-    background-repeat: no-repeat;
-    background-position: 3% 100%;
-    transition: 0.5s; }
-  #jb .row .main-element--click .half .big-j {
-    mix-blend-mode: overlay;
-    opacity: 0.8;
-    transition: 0.5s; }
-  #jb .row .main-element--click .half .big-b {
-    mix-blend-mode: overlay;
-    opacity: 0.8;
-    transition: 0.5s; }
+      #jb .row .main-element .half .big-letter {
+        font-size: 62rem;
+        color: #232323;
+        text-shadow: 0px 0px 20px black; }
+      #jb .row .main-element .half .big-j {
+        letter-spacing: -55px;
+        transition: 0.5s; }
+      #jb .row .main-element .half .big-b {
+        margin-left: -55px; }
+      #jb .row .main-element .half .header {
+        color: #232323;
+        text-shadow: 0px 0px 20px black;
+        margin-top: 60rem; }
+      #jb .row .main-element .half .header--webdev {
+        padding-right: 15px; }
+      #jb .row .main-element .half .header--calligrapher {
+        padding-left: 15px; }
+    #jb .row .main-element .main-left {
+      z-index: 200;
+      background-image: none;
+      background-repeat: no-repeat;
+      background-position: 98% 97%;
+      transition: 0.5s; }
+    #jb .row .main-element .main-right {
+      z-index: 190;
+      background-image: none;
+      background-repeat: no-repeat;
+      background-position: 3% 100%;
+      transition: 0.5s; }
+    #jb .row .main-element--hover .half .big-j {
+      mix-blend-mode: screen;
+      opacity: 0.5;
+      transition: 0.5s; }
+    #jb .row .main-element--hover .half .big-b {
+      mix-blend-mode: screen;
+      opacity: 0.5;
+      transition: 0.5s; }
+    #jb .row .main-element--hover .half .header--webdev {
+      color: #0075a9;
+      transition: 0.5s; }
+    #jb .row .main-element--hover .half .header--calligrapher {
+      color: #dc4716;
+      transition: 0.5s; }
+    #jb .row .main-element--hover .main-left {
+      background-image: url("img/j.png");
+      transition: 0.5s; }
+    #jb .row .main-element--hover .main-right {
+      background-image: url("img/b.png");
+      background-repeat: no-repeat;
+      background-position: 3% 100%;
+      transition: 0.5s; }
+    #jb .row .main-element--click .half .big-j {
+      mix-blend-mode: overlay;
+      opacity: 0.8;
+      transition: 0.5s; }
+    #jb .row .main-element--click .half .big-b {
+      mix-blend-mode: overlay;
+      opacity: 0.8;
+      transition: 0.5s; }
 
 #header {
   background-image: url("img/header_pic.jpg");
