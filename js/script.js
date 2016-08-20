@@ -1,36 +1,64 @@
 (function($) {
 
-$headElement = $('.main-element');
+function ElementHover(element) {
 
-  function headElementHover() {
+  element.on('mouseover', function() {
+    if ($(this).hasClass('element--hover')) {
+    } else {
+      $(this).addClass('element--hover');
+    }
+  })
+  element.on('mouseleave', function() {
+    if ($(this).hasClass('element--hover')) {
+      $(this).removeClass('element--hover');
+    }
+  })
+}
 
-    $headElement.on('mouseover', function() {
-      if ($(this).hasClass('main-eleement--hover')) {
-      } else {
-        $(this).addClass('main-element--hover');
-      }
-    })
-    $headElement.on('mouseleave', function() {
-      if ($(this).hasClass('main-element--hover')) {
-        $(this).removeClass('main-element--hover');
-      }
-    })
-  }
+function ElementClick(element) {
 
-  function headElementClick() {
-    $headElement.on('click', function() {
-        $headElement.removeClass('main-element--click');
-      if ($(this).hasClass('main-eleement--click')) {
-      } else {
-        $(this).addClass('main-element--click');
-      }
-    })
-  }
+  element.on('click', function() {
+      element.removeClass('element--click');
+    if ($(this).hasClass('element--click')) {
+    } else {
+      $(this).addClass('element--click');
+    }
+  })
+}
 
+function scrollButtonClick() {
+  var $button = $('.scroll-button');
 
+  $button.on('click', function() {
+    $(this).removeClass('infinite flash');
+    if ($(this).hasClass('pulse')) {
+      $(this).removeClass('pulse')
+      .addClass('flash');
+    } else {
+      $(this).addClass('flash');
+    }
+  })
+}
 
-headElementHover();
-headElementClick();
+function fadeMe() {
+  var time = 0;
+  var $element = $('.fadeMe');
+	$element.each(function() {
+	    $(this).delay(time).fadeIn(1000);
+	    time += 1000;
+	});
+}
+
+function jbControl() {
+  $headElement = $('.main-element');
+
+  ElementHover($headElement);
+  ElementClick($headElement);
+}
+
+jbControl();
+scrollButtonClick();
+fadeMe();
 
 
 
