@@ -2,6 +2,7 @@ $arkhip: 'arkhipregular', Arial, sans-serif;
 $big-text: 62rem;
 $header: 10rem;
 $subheader: 7rem;
+$subsubheader: 5rem;
 $focus-text: 2rem;
 $base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 $base-grey: #232323;
@@ -26,6 +27,7 @@ body {
       display: none;
       .half {
         transition: 0.5s;
+        overflow: hidden;
         .big-letter {
           font-size: $big-text;
           color: $base-grey;
@@ -89,6 +91,7 @@ body {
       }
       .main-left {
         background-image: url('img/j.png');
+        background-position: 98% 97%;
         transition: 0.5s;
       }
       .main-right {
@@ -121,6 +124,31 @@ body {
   background-size: 100% auto;
   background-attachment: fixed;
   height: 1300px;
+  .to-top-btn {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    left: 100%;
+    margin-left: -200px;
+    top: 100%;
+    margin-top: -200px;
+    opacity: 0;
+    transition: 0.2s;
+    background-image: url('img/scroll-top.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .to-top-btn:hover {
+    opacity: 1;
+    transition: 0.2s;
+  }
+  .to-top-btn:active {
+    background-image: url('img/scroll-top-hover.png');
+    transition: 0.2s;
+  }
+  .to-top-btn--scroll {
+    opacity: 0.5;
+  }
   .header-top {
     height: 60vh;
     position: relative;
@@ -129,6 +157,7 @@ body {
       z-index: 5;
       .text-center {
         padding-top: 10%;
+        font-size: $subsubheader;
       }
     }
     &--middle {
@@ -143,6 +172,7 @@ body {
       z-index: 5;
       .text-center {
         padding-top: 9%;
+        font-size: $subsubheader;
       }
     }
   }
@@ -169,12 +199,10 @@ body {
       p {
         display: none;
       }
-    }
-    &-img {
-      display: none;
-      margin-top: -50px;
-      height: 175px;
-
+      .author {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+      }
     }
   }
 }
@@ -190,18 +218,7 @@ body {
     padding: 50px 0 200px 0;
     text-align: justify;
     .scroll-button {
-      width: 68px;
-      height: 106px;
-      position: absolute;
-      left: 50%;
-      margin-left: -34px;
       margin-top: -400px;
-      background-image: url('img/button_scroll.png');
-      transition: 0.3s;
-    }
-    .scroll-button:hover {
-      background-image: url('img/button_scroll_hover.png');
-      transition: 0.3s;
     }
     h2 {
       font-size: $subheader;
@@ -219,7 +236,11 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom;
+  padding-top: 100px;
   .skills-header {
+    .scroll-button {
+      margin-top: -250px;
+    }
     h2 {
       font-size: $header;
     }
@@ -235,4 +256,22 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   margin: 75px 0;
+}
+
+.scroll-button {
+  position: absolute;
+  left: 50%;
+  margin-left: -34px;
+  width: 68px;
+  height: 106px;
+  background-image: url('img/button_scroll.png');
+  transition: 0.3s;
+}
+.scroll-button:hover {
+  background-image: url('img/button_scroll_hover.png');
+  transition: 0.3s;
+}
+.showOverview {
+  opacity: 0;
+  transition: 0.5s;
 }

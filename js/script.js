@@ -1,27 +1,29 @@
 (function($) {
 
-function ElementHover(element) {
+function ElementHover(a, b) {
 
-  element.on('mouseover', function() {
-    if ($(this).hasClass('element--hover')) {
+  a.on('mouseover', function() {
+    // console.log(b, this);
+    if ($(this).hasClass(b)) {
+
     } else {
-      $(this).addClass('element--hover');
+      $(this).addClass(b);
     }
   })
-  element.on('mouseleave', function() {
-    if ($(this).hasClass('element--hover')) {
-      $(this).removeClass('element--hover');
+  a.on('mouseleave', function() {
+    if ($(this).hasClass(b)) {
+      $(this).removeClass(b);
     }
   })
 }
 
-function ElementClick(element) {
+function ElementClick(a, b) {
 
-  element.on('click', function() {
-      element.removeClass('element--click');
-    if ($(this).hasClass('element--click')) {
+  a.on('click', function() {
+      a.removeClass(b);
+    if ($(this).hasClass(b)) {
     } else {
-      $(this).addClass('element--click');
+      $(this).addClass(b);
     }
   })
 }
@@ -40,11 +42,11 @@ function scrollButtonClick() {
   })
 }
 
-function fadeMe() {
+function fadeMe(element, effect) {
   var time = 0;
-  var $element = $('.fadeMe');
+  var $element = $('.' + element);
 	$element.each(function() {
-	    $(this).delay(time).fadeIn(1000);
+	    $(this).delay(time).fadeIn(1000).addClass(effect);
 	    time += 500;
 	});
 }
@@ -74,18 +76,75 @@ function scrollToElement() {
   });
 }
 
-function jbControl() {
-  $headElement = $('.main-element');
+function onScrollEffect(offsetElement, effectElement, effect) {
 
-  ElementHover($headElement);
-  ElementClick($headElement);
+  // get current distance from top of viewport
+  currentTop = $(window).scrollTop();
+
+  $(window).scroll({
+      previousTop: 0
+    },
+
+  function() {
+    // define the header height here
+    var headerHeight = offsetElement.offset().top - 20;
+    // if user has scrolled past header, initiate the scroll up/scroll down hide show effect
+    if ($(window).scrollTop() > headerHeight) {
+      if (currentTop < this.previousTop) {
+      } else {
+        $(effectElement).addClass(effect);
+      }
+    }
+    this.previousTop = currentTop;
+    console.log(this.previousTop);
+  });
 }
 
+function showOverview() {
+  var offsetElement    =  $('#scroll-overview');
+  var effectElement    =  $('.showOverview');
+  var effect           =  'animated fadeIn'
+
+  onScrollEffect(offsetElement, effectElement, effect);
+}
+
+function showSkills() {
+  var offsetElement    =  $('#scroll-skills');
+  var effectElement    =  $('.skills-header--text');
+  var effect           =  'animated tada'
+
+  onScrollEffect(offsetElement, effectElement, effect);
+}
+
+function toTopBtn() {
+  var offsetElement    =  $('.header-quote');
+  var effectElement    =  $('.to-top-btn');
+  var effect           =  'to-top-btn--scroll'
+
+  onScrollEffect(offsetElement, effectElement, effect);
+}
+
+function jbControl() {
+  // config
+  $element = $('.main-element');
+  $effectHover = 'animated fadeIn element--hover'
+  $effectClick = 'animated fadeOut element--click'
+
+  fadeMe("main-element");
+  ElementHover($element, $effectHover);
+  ElementClick($element, $effectClick);
+}
+
+function showQuote() {
+  fadeMe('quote-fade', 'animated fadeInDown')
+}
+
+showQuote();
 jbControl();
 scrollButtonClick();
-fadeMe();
 scrollToElement();
-
-
+showSkills();
+showOverview();
+toTopBtn();
 
 })(window.$);
