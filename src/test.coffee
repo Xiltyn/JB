@@ -1,0 +1,5 @@
+(($) ->
+
+overviewElement = $('#overview')
+
+) Jquery

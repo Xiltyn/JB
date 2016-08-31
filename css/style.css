@@ -10,7 +10,7 @@ body {
   #jb .row {
     position: absolute;
     width: 100%;
-    margin-top: 5rem; }
+    margin-top: 0rem; }
     #jb .row .main-element {
       display: none; }
       #jb .row .main-element .half {
@@ -149,7 +149,7 @@ body {
       color: rgba(255, 255, 255, 0.7); }
 
 #overview {
-  margin-top: -650px;
+  margin-top: -120vh;
   padding-top: 550px;
   background: none;
   background-image: url("img/overview_bg.png");
@@ -159,7 +159,7 @@ body {
     padding: 50px 0 200px 0;
     text-align: justify; }
     #overview .overview-text .scroll-button {
-      margin-top: -400px; }
+      margin-top: -450px; }
     #overview .overview-text h2 {
       font-size: 7rem;
       padding: 25px 0; }
@@ -177,6 +177,19 @@ body {
     margin-top: -250px; }
   #skills .skills-header h2 {
     font-size: 10rem; }
+  #skills .skills-container {
+    margin: 175px 0; }
+    #skills .skills-container--background {
+      height: 250px;
+      background-color: rgba(255, 255, 255, 0.5); }
+      #skills .skills-container--background-header {
+        color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        text-align: center;
+        font-size: 7rem;
+        margin-top: -63px;
+        text-shadow: 0px 0px 20px black;
+        z-index: 300; }
 
 .separator {
   height: 20px;

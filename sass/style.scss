@@ -22,7 +22,7 @@ body {
   .row{
     position: absolute;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 0rem;
     .main-element {
       display: none;
       .half {
@@ -208,7 +208,7 @@ body {
 }
 
 #overview {
-  margin-top: -650px;
+  margin-top: -120vh;
   padding-top: 550px;
   background: none;
   background-image: url('img/overview_bg.png');
@@ -218,7 +218,7 @@ body {
     padding: 50px 0 200px 0;
     text-align: justify;
     .scroll-button {
-      margin-top: -400px;
+      margin-top: -450px;
     }
     h2 {
       font-size: $subheader;
@@ -243,6 +243,22 @@ body {
     }
     h2 {
       font-size: $header;
+    }
+  }
+  .skills-container {
+    margin: 175px 0;
+    &--background {
+      height: 250px;
+      background-color: rgba(255,255,255,0.5);
+      &-header {
+        color: rgba(255,255,255,0.5);
+        width: 100%;
+        text-align:center;
+        font-size: $subheader;
+        margin-top: -63px;
+        text-shadow: $base-text-shadow;
+        z-index: 300;
+      }
     }
   }
 }
