@@ -100,6 +100,30 @@ function onScrollEffect(offsetElement, effectElement, effect) {
   });
 }
 
+function onScrollFunction(offsetElement, effectFunction) {
+
+  // get current distance from top of viewport
+  currentTop = $(window).scrollTop();
+
+  $(window).scroll({
+      previousTop: 0
+    },
+
+  function() {
+    // define the header height here
+    var headerHeight = offsetElement.offset().top;
+    // if user has scrolled past header, initiate the scroll up/scroll down hide show effect
+    if ($(window).scrollTop() > headerHeight) {
+      if (currentTop < this.previousTop) {
+      } else {
+        effectFunction
+      }
+    }
+    this.previousTop = currentTop;
+    console.log(this.previousTop);
+  });
+}
+
 function showOverview() {
   var offsetElement    =  $('#scroll-overview');
   var effectElement    =  $('.showOverview');
@@ -110,8 +134,8 @@ function showOverview() {
 
 function showSkills() {
   var offsetElement    =  $('#scroll-skills');
-  var effectElement    =  $('.skills-header--text');
-  var effect           =  'animated tada'
+  var effectElement    =  $('.skills-container');
+  var effect           =  'animated fadeIn'
 
   onScrollEffect(offsetElement, effectElement, effect);
 }
@@ -138,6 +162,39 @@ function jbControl() {
 function showQuote() {
   fadeMe('quote-fade', 'animated fadeInDown')
 }
+
+function showSkillName() {
+  // var $el = $('.el--bar');
+  //
+  // $el.each(function() {
+  //   var $icn = $(this).find('.el--bar-icn');
+  //
+  //   $(this).on('mouseover', function() {
+  //     $icn.addClass('el--bar-icn-active');
+  //     console.log('Mousing over ' + $icn);
+  //     // $(this).on('mouseleave', function() {
+  //     //   $icn.removeClass('el--bar-icn-active');
+  //     // })
+  //   })
+  // })
+  function popIcons() {
+    var time = 0;
+    var $element = $('.el--bar-icn');
+  	$element.each(function() {
+  	    $(this).delay(time).addClass('el--bar-icn-active');
+  	    time += 500;
+  	});
+  }
+
+
+  var el = $('.skills-container');
+  var fun = popIcons();
+  onScrollFunction(el, fun);
+
+
+}
+
+showSkillName();
 
 showQuote();
 jbControl();
