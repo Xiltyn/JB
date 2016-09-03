@@ -1410,6 +1410,11 @@
       "from": "process-nextick-args@>=1.0.6 <1.1.0",
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.7.tgz"
     },
+    "progressbar.js": {
+      "version": "1.0.1",
+      "from": "progressbar.js@latest",
+      "resolved": "https://registry.npmjs.org/progressbar.js/-/progressbar.js-1.0.1.tgz"
+    },
     "proxy-addr": {
       "version": "1.1.2",
       "from": "proxy-addr@>=1.1.2 <1.2.0",
@@ -1578,6 +1583,11 @@
       "version": "1.0.1",
       "from": "setprototypeof@1.0.1",
       "resolved": "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.0.1.tgz"
+    },
+    "shifty": {
+      "version": "1.5.2",
+      "from": "shifty@>=1.5.2 <2.0.0",
+      "resolved": "https://registry.npmjs.org/shifty/-/shifty-1.5.2.tgz"
     },
     "sigmund": {
       "version": "1.0.1",

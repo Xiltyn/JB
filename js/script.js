@@ -76,7 +76,7 @@ function scrollToElement() {
   });
 }
 
-function onScrollEffect(offsetElement, effectElement, effect) {
+function onScrollEffect(offsetElement, effectElement, effect, callback) {
 
   // get current distance from top of viewport
   currentTop = $(window).scrollTop();
@@ -98,6 +98,8 @@ function onScrollEffect(offsetElement, effectElement, effect) {
     this.previousTop = currentTop;
     console.log(this.previousTop);
   });
+  if(typeof callback == "function")
+  callback();
 }
 
 function onScrollFunction(offsetElement, effectFunction) {
@@ -124,6 +126,20 @@ function onScrollFunction(offsetElement, effectFunction) {
   });
 }
 
+function loop() {
+    var args = arguments;
+    if (args.length <= 0)
+        return;
+    (function chain(i) {
+        if (i >= args.length || typeof args[i] !== 'function')
+            return;
+        window.setTimeout(function() {
+            args[i]();
+            chain(i + 1);
+        }, 500);
+    })(0);
+}
+
 function showOverview() {
   var offsetElement    =  $('#scroll-overview');
   var effectElement    =  $('.showOverview');
@@ -137,8 +153,49 @@ function showSkills() {
   var effectElement    =  $('.skills-container');
   var effect           =  'animated fadeIn'
 
-  onScrollEffect(offsetElement, effectElement, effect);
+  // get current distance from top of viewport
+  currentTop = $(window).scrollTop();
+
+  $(window).scroll({
+      previousTop: 0
+    },
+
+  function() {
+    // define the header height here
+    var headerHeight = offsetElement.offset().top - 20;
+    // if user has scrolled past header, initiate the scroll up/scroll down hide show effect
+    if ($(window).scrollTop() > headerHeight) {
+      if (currentTop < this.previousTop) {
+      } else {
+
+        loop(showContainer(),loopSkills())
+
+        function showContainer() {
+            $(effectElement).addClass(effect);
+        };
+
+        function loopSkills() {
+
+          var $element = $('.el--bar-icn');
+
+          $element.each(function(i) {
+            var $el = $(this);
+            setTimeout(function() {
+              $el.addClass('el--bar-icn-active');
+              console.log($(this));
+            }, 250*i);
+          });
+        }
+      }
+    }
+    this.previousTop = currentTop;
+    console.log(this.previousTop);
+  });
 }
+
+
+
+
 
 function toTopBtn() {
   var offsetElement    =  $('.header-quote');
@@ -164,37 +221,23 @@ function showQuote() {
 }
 
 function showSkillName() {
-  // var $el = $('.el--bar');
-  //
-  // $el.each(function() {
-  //   var $icn = $(this).find('.el--bar-icn');
-  //
-  //   $(this).on('mouseover', function() {
-  //     $icn.addClass('el--bar-icn-active');
-  //     console.log('Mousing over ' + $icn);
-  //     // $(this).on('mouseleave', function() {
-  //     //   $icn.removeClass('el--bar-icn-active');
-  //     // })
-  //   })
-  // })
-  function popIcons() {
-    var time = 0;
-    var $element = $('.el--bar-icn');
-  	$element.each(function() {
-  	    $(this).delay(time).addClass('el--bar-icn-active');
-  	    time += 500;
-  	});
-  }
+  var $el = $('.el--bar');
 
+  $el.each(function() {
+    var $icn = $(this).find('.el--bar-icn');
 
-  var el = $('.skills-container');
-  var fun = popIcons();
-  onScrollFunction(el, fun);
-
-
+    $(this).on('mouseover', function() {
+      $icn.addClass('el--bar-icn-active');
+      console.log('Mousing over ' + $icn);
+      // $(this).on('mouseleave', function() {
+      //   $icn.removeClass('el--bar-icn-active');
+      // })
+    })
+  })
 }
 
-showSkillName();
+
+
 
 showQuote();
 jbControl();
