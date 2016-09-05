@@ -168,7 +168,7 @@ function showSkills() {
       if (currentTop < this.previousTop) {
       } else {
 
-        loop(showContainer(),loopSkills())
+        loop(showContainer(),loopSkills(),testSkillProgressLoad())
 
         function showContainer() {
             $(effectElement).addClass(effect);
@@ -182,7 +182,7 @@ function showSkills() {
             var $el = $(this);
             setTimeout(function() {
               $el.addClass('el--bar-icn-active');
-              console.log($(this));
+              // console.log($(this));
             }, 250*i);
           });
         }
@@ -235,6 +235,19 @@ function showSkillName() {
     })
   })
 }
+
+function testSkillProgressLoad() {
+  var fillLevel
+  $('.el--bar').each(function() {
+    var defaultLevel = 100;
+      var fillLevel  = +$(this).find('.el--bar-fill').attr('data-skillLevel');
+      var setTo = defaultLevel - fillLevel;
+      console.log('transform', 'translateY(' + setTo.toString() + '%)');
+
+      $(this).find('.el--bar-fill').css('transform', 'translateY(' + setTo.toString() + '%)');
+  });
+}
+
 
 
 
