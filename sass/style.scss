@@ -1,9 +1,9 @@
 $arkhip: 'arkhipregular', Arial, sans-serif;
 $big-text: 62rem;
-$header: 10rem;
-$subheader: 7rem;
-$subsubheader: 5rem;
-$focus-text: 2rem;
+$header: 8rem;
+$subheader: 5rem;
+$subsubheader: 4rem;
+$focus-text: 1.5rem;
 $base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 $base-grey: #232323;
 $base-blue: #0075a9;
@@ -128,7 +128,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;
-  height: 1300px;
+  height: 100vh;
   .to-top-btn {
     position: fixed;
     width: 150px;
@@ -213,8 +213,8 @@ body {
 }
 
 #overview {
-  margin-top: -650px;
-  padding-top: 550px;
+  margin-top: -250px;
+  padding-top: 450px;
   background: none;
   background-image: url('img/overview_bg.png');
   background-repeat: no-repeat;
@@ -223,7 +223,7 @@ body {
     padding: 50px 0 200px 0;
     text-align: justify;
     .scroll-button {
-      margin-top: -400px;
+      margin-top: -375px;
     }
     h2 {
       font-size: $subheader;
@@ -243,14 +243,14 @@ body {
   padding-top: 100px;
   .skills-header {
     .scroll-button {
-      margin-top: -250px;
+      margin-top: -350px;
     }
     h2 {
       font-size: $header;
     }
   }
   .skills-container {
-    margin: 250px 0;
+    margin: 200px 0;
     opacity: 0;
     transition: all 0.5s;
     .row {

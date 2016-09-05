@@ -168,14 +168,25 @@ function showSkills() {
       if (currentTop < this.previousTop) {
       } else {
 
-        loop(showContainer(),loopSkills(),testSkillProgressLoad())
-
-        function showContainer() {
+      loop(
+        function() {
             $(effectElement).addClass(effect);
-        };
+        },
+        function() {
+          var fillLevel
 
-        function loopSkills() {
+          $('.el--bar').each(function(i) {
+            var $el = $(this);
+            var defaultLevel = 100;
+            var fillLevel  = +$(this).find('.el--bar-fill').attr('data-skillLevel');
+            var setTo = defaultLevel - fillLevel;
 
+            setTimeout(function() {
+              $el.find('.el--bar-fill').css('transform', 'translateY(' + setTo.toString() + '%)');
+            }, 250*i);
+          })
+        },
+        function() {
           var $element = $('.el--bar-icn');
 
           $element.each(function(i) {
@@ -185,7 +196,11 @@ function showSkills() {
               // console.log($(this));
             }, 250*i);
           });
-        }
+        });
+
+
+
+
       }
     }
     this.previousTop = currentTop;
@@ -236,17 +251,6 @@ function showSkillName() {
   })
 }
 
-function testSkillProgressLoad() {
-  var fillLevel
-  $('.el--bar').each(function() {
-    var defaultLevel = 100;
-      var fillLevel  = +$(this).find('.el--bar-fill').attr('data-skillLevel');
-      var setTo = defaultLevel - fillLevel;
-      console.log('transform', 'translateY(' + setTo.toString() + '%)');
-
-      $(this).find('.el--bar-fill').css('transform', 'translateY(' + setTo.toString() + '%)');
-  });
-}
 
 
 
