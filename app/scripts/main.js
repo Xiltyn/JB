@@ -53,10 +53,10 @@ function fadeMe(element, effect) {
 
 function scrollToElement() {
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $('a').on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+    if (this.hash !== '') {
       // Prevent default anchor click behavior
       event.preventDefault();
 
@@ -79,7 +79,7 @@ function scrollToElement() {
 function onScrollEffect(offsetElement, effectElement, effect, callback) {
 
   // get current distance from top of viewport
-  currentTop = $(window).scrollTop();
+  var currentTop = $(window).scrollTop();
 
   $(window).scroll({
       previousTop: 0
@@ -98,14 +98,14 @@ function onScrollEffect(offsetElement, effectElement, effect, callback) {
     this.previousTop = currentTop;
     console.log(this.previousTop);
   });
-  if(typeof callback == "function")
+  if(typeof callback == 'function')
   callback();
 }
 
 function onScrollFunction(offsetElement, effectFunction) {
 
   // get current distance from top of viewport
-  currentTop = $(window).scrollTop();
+  var currentTop = $(window).scrollTop();
 
   $(window).scroll({
       previousTop: 0
@@ -154,10 +154,10 @@ function showSkills() {
   var effect           =  'animated fadeIn'
 
   // get current distance from top of viewport
-  currentTop = $(window).scrollTop();
+  var currentTop = $(window).scrollTop();
 
   $(window).scroll({
-      previousTop: 0
+    previousTop: 0
     },
 
   function() {
@@ -222,11 +222,11 @@ function toTopBtn() {
 
 function jbControl() {
   // config
-  $element = $('.main-element');
-  $effectHover = 'animated fadeIn element--hover'
-  $effectClick = 'animated fadeOut element--click'
+  var $element = $('.main-element');
+  var $effectHover = 'animated fadeIn element--hover'
+  var $effectClick = 'animated fadeOut element--click'
 
-  fadeMe("main-element");
+  fadeMe('main-element');
   ElementHover($element, $effectHover);
   ElementClick($element, $effectClick);
 }

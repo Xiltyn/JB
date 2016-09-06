@@ -1,5 +1,0 @@
-(($) ->
-
-overviewElement = $('#overview')
-
-) Jquery

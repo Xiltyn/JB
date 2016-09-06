@@ -1,3 +1,12 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "font";
+@import "animate";
+
 $arkhip: 'arkhipregular', Arial, sans-serif;
 $big-text: 62rem;
 $header: 8rem;
@@ -95,12 +104,12 @@ body {
         }
       }
       .main-left {
-        background-image: url('img/j.png');
+        background-image: url('../images/j.png');
         background-position: 98% 97%;
         transition: 0.5s;
       }
       .main-right {
-        background-image: url('img/b.png');
+        background-image: url('../images/b.png');
         background-repeat: no-repeat;
         background-position: 3% 100%;
         transition: 0.5s;
@@ -124,7 +133,7 @@ body {
 }
 
 #header {
-  background-image: url('img/header_pic.jpg');
+  background-image: url('../images/header_pic.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;
@@ -139,7 +148,7 @@ body {
     margin-top: -200px;
     opacity: 0;
     transition: 0.2s;
-    background-image: url('img/scroll-top.png');
+    background-image: url('../images/scroll-top.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -148,7 +157,7 @@ body {
     transition: 0.2s;
   }
   .to-top-btn:active {
-    background-image: url('img/scroll-top-hover.png');
+    background-image: url('../images/scroll-top-hover.png');
     transition: 0.2s;
   }
   .to-top-btn--scroll {
@@ -183,7 +192,7 @@ body {
   }
   .header-top::after {
     content: "";
-    background-image: url('img/header_bg.png');
+    background-image: url('../images/header_bg.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     opacity: 0.9;
@@ -216,7 +225,7 @@ body {
   margin-top: -250px;
   padding-top: 450px;
   background: none;
-  background-image: url('img/overview_bg.png');
+  background-image: url('../images/overview_bg.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   .overview-text {
@@ -236,7 +245,7 @@ body {
 }
 
 #skills {
-  background-image: url('img/skills_bg.jpg');
+  background-image: url('../images/skills_bg.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom;
@@ -324,7 +333,7 @@ body {
 .separator {
   height: 20px;
   width: 100%;
-  background-image: url('img/separator.png');
+  background-image: url('../images/separator.png');
   background-repeat: no-repeat;
   background-position: center;
   margin: 75px 0;
@@ -336,11 +345,11 @@ body {
   margin-left: -34px;
   width: 68px;
   height: 106px;
-  background-image: url('img/button_scroll.png');
+  background-image: url('../images/button_scroll.png');
   transition: 0.3s;
 }
 .scroll-button:hover {
-  background-image: url('img/button_scroll_hover.png');
+  background-image: url('../images/button_scroll_hover.png');
   transition: 0.3s;
 }
 .showOverview {
