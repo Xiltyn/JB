@@ -6,21 +6,11 @@ $icon-font-path: '../fonts/';
 
 @import "font";
 @import "animate";
-
-$arkhip: 'arkhipregular', Arial, sans-serif;
-$big-text: 62rem;
-$header: 8rem;
-$subheader: 5rem;
-$subsubheader: 4rem;
-$focus-text: 1.5rem;
-$base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-$base-grey: #232323;
-$base-blue: #0075a9;
-$base-red: #dc4716;
+@import "variables";
 
 @keyframes slideUp {
   0% {transform: translateY(0);}
-  100%{transform: translateY(-60px);}
+  100%{transform: translateY(-90px);}
 }
 
 body {
@@ -170,13 +160,12 @@ body {
     &--left {
       z-index: 5;
       .text-center {
-        padding-top: 10%;
+        padding-top: 8%;
         font-size: $subsubheader;
       }
     }
     &--middle {
       z-index: 5;
-      padding-top: 15px;
       &-avatar {
         margin: auto;
         width: 100%;
@@ -185,7 +174,7 @@ body {
     &--right {
       z-index: 5;
       .text-center {
-        padding-top: 9%;
+        padding-top: 4%;
         font-size: $subsubheader;
       }
     }
@@ -195,6 +184,7 @@ body {
     background-image: url('../images/header_bg.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
+    background-position: bottom;
     opacity: 0.9;
     top: 0;
     left: 0;
@@ -202,11 +192,11 @@ body {
     right: 0;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 480px;
   }
   .header-quote {
     &-text {
-      margin-top: -50px;
+      margin-top: -80px;
       height: 175px;
       padding-top: 50px;
       font-size: 1.75rem;
@@ -222,7 +212,7 @@ body {
 }
 
 #overview {
-  margin-top: -250px;
+  margin-top: -320px;
   padding-top: 450px;
   background: none;
   background-image: url('../images/overview_bg.png');
@@ -232,7 +222,7 @@ body {
     padding: 50px 0 200px 0;
     text-align: justify;
     .scroll-button {
-      margin-top: -375px;
+      margin-top: -310px;
     }
     h2 {
       font-size: $subheader;
@@ -283,7 +273,7 @@ body {
         margin: 0;
         .el {
           height: 160px;
-          padding: 10px;
+          padding: 5px 20px;
           &--bar {
             position: relative;
             // background-color: rgba(255, 255, 255, 0.5);
@@ -309,18 +299,34 @@ body {
               margin-left: -24px;
               top: 100%;
               z-index: 50;
+              transition: all 0.5s cubic-bezier(.32,.8,.44,1);
             }
             &-icn-active {
               animation: slideUp 0.4s cubic-bezier(.32,.8,.44,1.24) forwards;
             }
+            &-txt {
+              position: absolute;
+              top: 50px;
+              left: 100px;
+              width: 100%;
+              text-align: center;
+              transition: all 0.5s cubic-bezier(.32,.8,.44,1);
+              h3 {
+                font-size: 1.5rem;
+              }
+            }
           }
         }
-        // .el:hover {
-        //   .el--bar-fill {
-        //     transform: translateY(0);
-        //     transition: all 0.5s cubic-bezier(.32,.8,.44,1);
-        //   }
-        // }
+        .el:hover {
+          .el--bar {
+            &-icn {
+              left: -100px;
+            }
+            &-txt{
+              left: 0;
+            }
+          }
+        }
       }
     }
   }

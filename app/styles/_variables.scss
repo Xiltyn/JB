@@ -1,0 +1,23 @@
+$arkhip: 'arkhipregular', Arial, sans-serif;
+$big-text: 62rem;
+$header: 9rem;
+$subheader: 7rem;
+$subsubheader: 5rem;
+$focus-text: 2rem;
+$base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+$base-grey: #232323;
+$base-blue: #0075a9;
+$base-red: #dc4716;
+
+@media screen and (max-width: 1280px) {
+  $arkhip: 'arkhipregular', Arial, sans-serif;
+  $big-text: 62rem;
+  $header: 8rem;
+  $subheader: 5rem;
+  $subsubheader: 4rem;
+  $focus-text: 1.5rem;
+  $base-text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+  $base-grey: #232323;
+  $base-blue: #0075a9;
+  $base-red: #dc4716;
+}
