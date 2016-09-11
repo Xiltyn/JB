@@ -195,15 +195,23 @@ body {
           background-color: #0075a9;
           top: 50px;
           left: 80px;
+          overflow: hidden;
           a {
             text-decoration: none;
             color: #fff;
           }
           &--fill {
-            img {
-              margin-top: -5px;
-              padding: 0 10px;
+            transition: all 0.5s cubic-bezier(.32,.8,.44,1);
+            &-icn {
+              img {
+                margin-top: 80px;
+                padding: 0 10px;
+              }
             }
+          }
+          &--fill:hover {
+            transform: translateY(-115px);
+            padding: 20px
           }
         }
       }
