@@ -1,0 +1,88 @@
+.icn {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icn-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icn-images {
+  width: 1.125em;
+}
+
+.icn-connection {
+  width: 1.25em;
+}
+
+.icn-books {
+  width: 1.125em;
+}
+
+.icn-library {
+  width: 1.0625em;
+}
+
+.icn-price-tags {
+  width: 1.25em;
+}
+
+.icn-history {
+  width: 1.0625em;
+}
+
+.icn-keyboard {
+  width: 1.125em;
+}
+
+.icn-bubbles {
+  width: 1.125em;
+}
+
+.icn-bubbles2 {
+  width: 1.125em;
+}
+
+.icn-bubbles3 {
+  width: 1.125em;
+}
+
+.icn-bubbles4 {
+  width: 1.125em;
+}
+
+.icn-users {
+  width: 1.125em;
+}
+
+.icn-menu2 {
+  width: 1.375em;
+}
+
+.icn-menu3 {
+  width: 1.375em;
+}
+
+.icn-menu4 {
+  width: 1.375em;
+}
+
+.icn-volume-high {
+  width: 1.0625em;
+}
+
+.icn-embed2 {
+  width: 1.25em;
+}
+
+.icn-youtube2 {
+  width: 2.5087890625em;
+}
