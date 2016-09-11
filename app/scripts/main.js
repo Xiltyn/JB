@@ -167,11 +167,8 @@ function showSkills() {
     if ($(window).scrollTop() > headerHeight) {
       if (currentTop < this.previousTop) {
       } else {
-
+      $(effectElement).addClass(effect);
       loop(
-        function() {
-            $(effectElement).addClass(effect);
-        },
         function() {
           var fillLevel
 
