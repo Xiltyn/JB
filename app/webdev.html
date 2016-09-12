@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/hover/css/hover.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -34,13 +35,48 @@
       </a>
       <div class="row header-bar">
         <div class="col-sm-4 col-md-4 header-bar--menu">
-          <h3 class="text-left">menu</h3>
+          <div class="header-bar--menu-btn menu-btn">
+            <svg class="icn icn-home">
+              <use xlink:href="symbol-defs.svg#icn-home3">
+              </use>
+            </svg>
+            <div class="header-bar--menu-btn--circle">
+            </div>
+          </div>
+          <nav class="header-bar--menu-nav">
+            <ul class="header-bar--menu-nav--hole">
+              <li class="nav-el hvr-bounce-to-top">
+                <a href="#">home</a>
+              </li>
+              <li class="nav-el hvr-bounce-to-top">
+                <a href="#">web dev</a>
+              </li>
+              <li class="nav-el hvr-bounce-to-top">
+                <a href="#">calligraphy</a>
+              </li>
+              <li class="nav-el hvr-bounce-to-top">
+                <a href="#">contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="col-sm-4 col-md-4 header-bar--search">
-          <h3 class="text-center">search</h3>
+          <h3 class="text-center cl-effect-21">
+            <a href="#">
+              search
+            </a>
+          </h3>
         </div>
         <div class="col-sm-4 col-md-4 header-bar--home">
-          <h3 class="text-right">JB</h3>
+          <div class="header-bar--home-btn text-right">
+            <div class="menu-btn btn-label">
+              <a href="../">
+                jb
+              </a>
+            </div>
+            <div class="header-bar--home-btn--circle">
+            </div>
+          </div>
         </div>
       </div>
       <div class="container header-top">
@@ -350,8 +386,8 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="svgxuse.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script src="svgxuse.js"></script>
   </body>
 </html>

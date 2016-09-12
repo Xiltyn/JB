@@ -4,15 +4,13 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "normalize";
 @import "font";
 @import "svg";
+@import "animations";
 @import "animate";
+@import "hover";
 @import "variables";
-
-@keyframes slideUp {
-  0% {transform: translateY(0);}
-  100%{transform: translateY(-90px);}
-}
 
 body {
   background: $base-blue;
@@ -153,6 +151,105 @@ body {
   }
   .to-top-btn--scroll {
     opacity: 0.5;
+  }
+  .header-bar {
+    .menu-btn {
+      opacity: 0.5;
+      transition: all 0.2s ease-in;
+      z-index: 10;
+    }
+    .menu-btn:hover {
+      opacity: 1;
+    }
+    &--menu {
+      &-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        margin: 15px 10px;
+        font-size: 2.5rem;
+        &--circle {
+          position: absolute;
+          opacity: 0;
+          top: 10px;
+          left: 10px;
+          width: 0;
+          height: 0;
+          border: 3px solid #fff;
+          border-radius: 50%;
+          transition: all 0.3s cubic-bezier(.32,.8,.44,1.5);
+        }
+      }
+      &-btn:hover > .header-bar--menu-btn--circle {
+        opacity: 1;
+        top: -4.75px;
+        left: -7px;
+        width: 4rem;
+        height: 4rem;
+      }
+      &-nav {
+        &--hole {
+          list-style: none;
+          .nav-el {
+            position: relative;
+            margin: 5px;
+            text-align: center;
+            width: 150px ;
+            height: 25px;
+            border: 2px solid #fff;
+            overflow: hidden;
+            display: block;
+            transform: translateX(-300px);
+            transition: all 0.3s cubic-bezier(.32,.8,.44,1.5);
+          }
+          .nav-el--active {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+    &--search {
+      padding-top: 0px;
+      a {
+        line-height: 0;
+        padding: 0;
+      }
+    }
+    &--home {
+      &-btn {
+        position: relative;
+        font-size: 2.5rem;
+        .btn-label {
+          position: absolute;
+          left: 100%;
+          top: 10px;
+          margin-left: -35px;
+          width: 30px;
+        }
+        &--circle {
+          position: absolute;
+          opacity: 0;
+          top: 30px;
+          left: 100%;
+          margin-left: -20px;
+          width: 0;
+          height: 0;
+          border: 3px solid #fff;
+          border-radius: 50%;
+          transition: all 0.3s cubic-bezier(.32,.8,.44,1.5);
+          z-index: 0;
+        }
+      }
+      &-btn:hover > .header-bar--home-btn--circle {
+        opacity: 1;
+        top: 10px;
+        left: 100%;
+        margin-left: -40px;
+        width: 4rem;
+        height: 4rem;
+
+      }
+    }
   }
   .header-top {
     height: 70vh;

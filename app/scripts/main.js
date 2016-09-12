@@ -140,6 +140,23 @@ function loop() {
     })(0);
 }
 
+function toggleMenu() {
+  var $menuBtn = $('.header-bar--menu-btn');
+
+  $menuBtn.on('click', function(event) {
+    var element = 'nav-el';
+    var effect = 'nav-el--active';
+    fadeMe(element, effect);
+
+    $('html').one('click', function() {
+      $('.' + element).removeClass('nav-el--active');
+    })
+
+    event.stopPropagation();
+
+  });
+}
+
 function showOverview() {
   var offsetElement    =  $('#scroll-overview');
   var effectElement    =  $('.showOverview');
@@ -194,10 +211,6 @@ function showSkills() {
             }, 250*i);
           });
         });
-
-
-
-
       }
     }
     this.previousTop = currentTop;
@@ -252,7 +265,7 @@ function showSkillName() {
 
 
 
-
+toggleMenu();
 showQuote();
 jbControl();
 scrollButtonClick();
