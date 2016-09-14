@@ -160,7 +160,7 @@ function toggleMenu() {
 function showOverview() {
   var offsetElement    =  $('#scroll-overview');
   var effectElement    =  $('.showOverview');
-  var effect           =  'animated fadeIn'
+  var effect           =  'animated bounceIn'
 
   onScrollEffect(offsetElement, effectElement, effect);
 }
@@ -218,12 +218,8 @@ function showSkills() {
   });
 }
 
-
-
-
-
 function toTopBtn() {
-  var offsetElement    =  $('.header-quote');
+  var offsetElement    =  $('#overview');
   var effectElement    =  $('.to-top-btn');
   var effect           =  'to-top-btn--scroll'
 
@@ -266,7 +262,7 @@ function showSkillName() {
 
 
 toggleMenu();
-showQuote();
+// showQuote();
 jbControl();
 scrollButtonClick();
 scrollToElement();

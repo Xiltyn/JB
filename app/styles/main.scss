@@ -4,13 +4,34 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import "normalize";
 @import "font";
 @import "svg";
 @import "animations";
 @import "animate";
 @import "hover";
 @import "variables";
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+a:active {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
 
 body {
   background: $base-blue;
@@ -140,6 +161,7 @@ body {
     background-image: url('../images/scroll-top.png');
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 1000;
   }
   .to-top-btn:hover {
     opacity: 1;
@@ -252,9 +274,17 @@ body {
     }
   }
   .header-top {
-    height: 70vh;
+    height: 60vh;
     position: relative;
-    padding-top: 35vh;
+    // border: 1px solid white;
+    &--pos {
+      position: absolute;
+      width: 100%;
+      // border: 1px solid white;
+      height: 180px;
+      top: 50%;
+      margin-top:-90px;
+    }
     &--left {
       z-index: 5;
       &-avatar {
@@ -337,25 +367,40 @@ body {
 }
 
 #overview {
-  margin-top: -320px;
+  margin-top: -32vh;
   padding-top: 450px;
   background: none;
   background-image: url('../images/overview_bg.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
-  .overview-text {
+  .overview-wrapper {
     padding: 50px 0 200px 0;
     text-align: justify;
+    height: 100vh;
     .scroll-button {
       margin-top: -450px;
     }
-    h2 {
-      font-size: $subheader;
-      padding: 25px 0;
+    @media screen and (max-width: 1280px) {
+      .scroll-button {
+        margin-top: -500px;
+      }
     }
-    p {
-      font-size: $focus-text;
+    &--pos {
+
     }
+    &-el {
+      // border: 1px solid white;
+      padding: 100px 0;
+      height: 500px;
+      &-icn {
+        margin: auto;
+        width: 15rem;
+        font-size: 15rem;
+      }
+    }
+  }
+  .scroll-button {
+    margin-top: -100px;
   }
 }
 
@@ -366,9 +411,6 @@ body {
   background-position: bottom;
   padding-top: 100px;
   .skills-header {
-    .scroll-button {
-      margin-top: -350px;
-    }
     h2 {
       font-size: $header;
     }
