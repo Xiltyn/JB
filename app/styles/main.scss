@@ -175,6 +175,7 @@ body {
     opacity: 0.5;
   }
   .header-bar {
+    opacity: 0;
     .menu-btn {
       opacity: 0.5;
       transition: all 0.2s ease-in;
@@ -287,6 +288,10 @@ body {
     }
     &--left {
       z-index: 5;
+      .showHeader {
+        opacity: 0;
+        // visibility: hidden;
+      }
       &-avatar {
         z-index: 5;
         padding: 0;
@@ -314,7 +319,9 @@ body {
         height: 80px;
         margin: auto;
         border: solid 3px #fff;
+        opacity: 0;
         &-button {
+          opacity: 0;
           position: absolute;
           width: 100%;
           height: 100%;

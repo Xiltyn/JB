@@ -49,6 +49,7 @@ function fadeMe(element, effect) {
 	    $(this).delay(time).fadeIn(1000).addClass(effect);
 	    time += 500;
 	});
+  console.log('fadeMe fired un :: Element: ' + $element + ' with Effect: ' + effect);
 }
 
 function scrollToElement() {
@@ -157,6 +158,34 @@ function toggleMenu() {
   });
 }
 
+function showHeader() {
+  var $img             = $('.header-top--left-avatar');
+  var $name            = $('.header-top--left-name');
+  var $occupation      = $('.header-top--left-occupation');
+  var $dummy           = $('.header-top--right--dummy');
+  var $btn             = $('.header-top--right--dummy-button');
+  var $bar             = $('.header-bar');
+
+  setTimeout(function() {
+    $img.addClass('animated bounceIn');
+    setTimeout(function() {
+      $name.addClass('animated fadeIn');
+      setTimeout(function() {
+        $occupation.addClass('animated fadeInUp');
+        setTimeout(function() {
+          $dummy.addClass('animated fadeInRight');
+          setTimeout(function() {
+            $btn.addClass('animated fadeInRight');
+            setTimeout(function() {
+              $bar.addClass('animated fadeInDown');
+            }, 100);
+          }, 150);
+        }, 200);
+      }, 250);
+    }, 250);
+  }, 500);
+}
+
 function showOverview() {
   var offsetElement    =  $('#scroll-overview');
   var effectElement    =  $('.showOverview');
@@ -262,7 +291,7 @@ function showSkillName() {
 
 
 toggleMenu();
-// showQuote();
+showHeader();
 jbControl();
 scrollButtonClick();
 scrollToElement();
