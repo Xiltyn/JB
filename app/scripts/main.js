@@ -186,12 +186,52 @@ function showHeader() {
   }, 500);
 }
 
-function showOverview() {
-  var offsetElement    =  $('#scroll-overview');
-  var effectElement    =  $('.showOverview');
-  var effect           =  'animated bounceIn'
 
-  onScrollEffect(offsetElement, effectElement, effect);
+function showOverview() {
+  var currentTop = $(window).scrollTop();
+  var offsetElement = $('#overview');
+
+  $(window).scroll( {previousTop: 0},
+    function() {
+      var offset = offsetElement.offset().top - 20;
+
+      if ($(window).scrollTop() > offset) {
+        if (currentTop < this.previousTop) {
+        } else {
+
+          loop(
+            function() {
+              var $el    =  $('.showOverview');
+
+              $el.each(function(i) {
+                var element = $(this);
+
+                setTimeout(function() {
+                  element.addClass('animated bounceIn');
+                }, 200*i);
+              });
+            },
+            function() {
+              var $elDesc = $('.showOverviewText');
+              
+              $elDesc.each(function(i) {
+                var element = $(this);
+
+                setTimeout(function() {
+                  element.addClass('animated fadeInUp');
+                }, 200*i);
+              });
+            }
+          )
+
+        }
+      }
+      this.previousTop = currentTop;
+
+      // LOG CURRENT POSITION
+      // console.log(this.previousTop);
+    }
+  );
 }
 
 function showSkills() {
@@ -294,8 +334,8 @@ toggleMenu();
 showHeader();
 jbControl();
 scrollButtonClick();
-scrollToElement();
 showSkills();
+scrollToElement();
 showOverview();
 toTopBtn();
 
