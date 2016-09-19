@@ -410,7 +410,7 @@ function injectGallery() {
 
   // AJAX deprecated call
   // ==========================================================::||:>
-  $.when($.ajax("scripts/json/data.json")).then(success, failure);
+  $.when($.ajax('data.json')).then(success, failure);
 
   // Callback function called when objects are successfully loaded
   // ==========================================================::||:>
@@ -423,7 +423,7 @@ function injectGallery() {
   // Callback function called when objects fail to be loaded
   // ==========================================================::||:>
   function failure() {
-    console.log("Whooops! Something went wrong with loading the JSON file data for the Projects Gallery!");
+    console.log('Whooops! Something went wrong with loading the JSON file data for the Projects Gallery!');
   }
 
 }
