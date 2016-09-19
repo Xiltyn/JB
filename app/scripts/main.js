@@ -1,4 +1,4 @@
-(function($) {
+(function($, _) {
 
 function ElementHover(a, b) {
 
@@ -213,7 +213,7 @@ function showOverview() {
             },
             function() {
               var $elDesc = $('.showOverviewText');
-              
+
               $elDesc.each(function(i) {
                 var element = $(this);
 
@@ -326,10 +326,109 @@ function showSkillName() {
   })
 }
 
+function injectGallery() {
+// Function wide variables
+// ============================================================::||:>
+  var $projectElements;
 
+  // Function parsing data into Underscore.js template
+  // ==========================================================::||:>
+  function render(data) {
+    var $template        = _.template($('#projTemp').html());
+    var $wrapper         = $('#galleryAjax');
+    var $objects         = data.projects;
+    var $fragment        = $(document.createDocumentFragment());
 
+    $objects.forEach(function(element) {
+      $fragment.append($template({
+        id: element.id,
+        name: element.name,
+        desc: element.desc,
+        repo: element.repo
+      }));
+    });
 
+    $wrapper.append($fragment);
+    $projectElements = $('.project-el');
+  };
 
+  // Animate in thumbnails on scroll
+  // ==========================================================::||:>
+  function showProjects() {
+    var currentTop = $(window).scrollTop();
+    var offsetElement = $('#projects');
+    var elementGroup = $('.project-el');
+
+    $(window).scroll( {previousTop: 0},
+      function() {
+        var offset = offsetElement.offset().top - 20;
+
+        if ($(window).scrollTop() > offset) {
+          if (currentTop < this.previousTop) {
+          } else {
+            elementGroup.each(function(i) {
+              var element = $(this);
+              setTimeout(function() {
+                element.addClass('animated fadeIn');
+              }, 150*i);
+            });
+          }
+        }
+        this.previousTop = currentTop;
+
+        // LOG CURRENT POSITION
+        // console.log(this.previousTop);
+      }
+    );
+  }
+
+  // Open lightbox on click
+  // ==========================================================::||:>
+  function showLightbox() {
+    var lightbox = $('.lightbox');
+    var lightboxTxt = $('.lightbox-wrapper--text');
+    var lightboxImg = $('.lightbox-wrapper--img');
+
+    $projectElements.on('click', function(event) {
+      var $th       = $(this);
+      var $name     = $th.find('.project-el--thumb-overlay h3').text();
+      var $desc     = $th.find('.project-el--thumb-overlay p').text();
+      var $imgSrc   = $th.find('.project-el--thumb img').attr('data-bigSrc');
+      var $repo     = $th.find('.project-el--thumb img').attr('data-repo');
+
+      lightboxImg.html('<img src="' + $imgSrc + '" alt="' + $name + '" />');
+      lightboxTxt.html('<a href="' + $repo + '" target="_blank"><h3 class="animated flash">' + $name + '</h3></a><p>' + $desc + '</p>');
+      lightbox.addClass('animated fadeIn').css('pointer-events', 'all');
+
+      $('html').one('click', function() {
+        lightbox.removeClass('animated fadeIn').css('pointer-events', 'none');
+      })
+
+      event.stopPropagation();
+    })
+  }
+
+  // AJAX deprecated call
+  // ==========================================================::||:>
+  $.when($.ajax("scripts/json/data.json")).then(success, failure);
+
+  // Callback function called when objects are successfully loaded
+  // ==========================================================::||:>
+  function success(success) {
+    render(success);
+    showProjects();
+    showLightbox()
+  }
+
+  // Callback function called when objects fail to be loaded
+  // ==========================================================::||:>
+  function failure() {
+    console.log("Whooops! Something went wrong with loading the JSON file data for the Projects Gallery!");
+  }
+
+}
+
+injectGallery();
 toggleMenu();
 showHeader();
 jbControl();
@@ -339,4 +438,4 @@ scrollToElement();
 showOverview();
 toTopBtn();
 
-})(window.$);
+})(window.$, window._);

@@ -150,12 +150,12 @@ body {
   height: 115vh;
   .to-top-btn {
     position: fixed;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     left: 100%;
-    margin-left: -200px;
+    margin-left: -150px;
     top: 100%;
-    margin-top: -200px;
+    margin-top: -150px;
     opacity: 0;
     transition: 0.2s;
     background-image: url('../images/scroll-top.png');
@@ -431,14 +431,14 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom;
-  padding-top: 100px;
+  padding: 100px 0;
   .skills-header {
     h2 {
       font-size: $header;
     }
   }
   .skills-container {
-    margin: 200px 0;
+    margin: 150px 0;
     opacity: 0;
     transition: all 0.5s;
     .row {
@@ -519,9 +519,104 @@ body {
       }
     }
   }
+  .scroll-button {
+    margin-top: -70px;
+  }
 }
 
-
+#projects {
+  position: relative;
+  min-height: 100vh;
+  background-color: $base-grey;
+  padding: 150px 0 250px 0;
+  h2 {
+    font-size: $subheader;
+    padding: 0 0 150px 0;
+  }
+  .project-el {
+    opacity: 0;
+    height: 300px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 0;
+    &--thumb {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: auto;
+      }
+      &-overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.8,0.2,0.5,1);
+        padding: 15px;
+        z-index: 200;
+        h3 {
+          padding: 10px 0 20px 0;
+          border-bottom: 1px solid #fff;
+          margin-bottom: 20px;
+        }
+        p {
+          text-align: justify;
+        }
+      }
+      &-overlay:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .lightbox {
+    opacity: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    width: 90vw;
+    height: 90vh;
+    top: 5%;
+    left: 5%;
+    padding: 100px;
+    pointer-events: none;
+    z-index: 500;
+    &-wrapper {
+      height: 80%;
+      &--img {
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &--text {
+        h3 {
+          padding: 20px 0;
+          width: 30%;
+          margin:  20px auto;
+          text-align: center;
+          transition: all 0.3s ease-out;
+          height: 50px;
+          line-height: 15px;
+        }
+        h3:hover {
+          width: 20%;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .scroll-button {
+    margin-top: 100px;
+  }
+}
 
 
 
