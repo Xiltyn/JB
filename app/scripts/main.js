@@ -388,6 +388,12 @@ function injectGallery() {
     var lightbox = $('.lightbox');
     var lightboxTxt = $('.lightbox-wrapper--text');
     var lightboxImg = $('.lightbox-wrapper--img');
+    var spinner = $('.spinner');
+
+    function hideLoader() {
+
+      spinner.css('opacity', '0');
+    }
 
     $projectElements.on('click', function(event) {
       var $th       = $(this);
@@ -396,13 +402,32 @@ function injectGallery() {
       var $imgSrc   = $th.find('.project-el--thumb img').attr('data-bigSrc');
       var $repo     = $th.find('.project-el--thumb img').attr('data-repo');
 
-      lightboxImg.html('<img src="' + $imgSrc + '" alt="' + $name + '" />');
-      lightboxTxt.html('<a href="' + $repo + '" target="_blank"><h3 class="animated flash">' + $name + '</h3></a><p>' + $desc + '</p>');
       lightbox.addClass('animated fadeIn').css('pointer-events', 'all');
+
+      setTimeout(function() {
+        hideLoader();
+
+        setTimeout(function() {
+          lightboxImg.html('<img src="' + $imgSrc + '" alt="' + $name + '" />');
+          lightboxTxt.html('<a href="' + $repo + '" target="_blank"><h3 class="animated flash">' + $name + '</h3></a><p>' + $desc + '</p>');
+        }, 300);
+      }, 1000);
 
       $('html').one('click', function() {
         lightbox.removeClass('animated fadeIn').css('pointer-events', 'none');
+        lightboxImg.html('');
+        lightboxTxt.html('');
+        spinner.css('opacity', '1');
+        $('body').removeClass('stop-scrolling');
       })
+
+      // disable scrolling on body
+      // ======================================================::||:>
+      if ($('body').hasClass('stop-scrolling')) {
+
+      } else {
+        $('body').addClass('stop-scrolling');
+      }
 
       event.stopPropagation();
     })
