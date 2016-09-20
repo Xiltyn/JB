@@ -448,6 +448,13 @@
             </h2>
           </div>
         </div>
+        <nav id="projects-nav" class="row">
+          <div class="col-sm-12">
+            <ul id="navAjax">
+
+            </ul>
+          </div>
+        </nav>
         <div id="galleryAjax" class="row">
           <div class="lightbox">
             <div class="lightbox-wrapper">
@@ -466,8 +473,15 @@
             </div>
           </div>
 
+
+          <script type="text/template" id="catTemp">
+            <li class="category-btn" data-category="<%= category %>">
+              <%= category %>
+            </li>
+          </script>
+
           <script type="text/template" id="projTemp">
-            <div class="project-el el-<%= id %> col-sm-6 col-md-4">
+            <div class="project-el el-<%= id %> col-sm-6 col-md-4" data-category="<%= category %>">
               <div class="project-el--thumb">
                 <img src="images/gallery/thumb/project_<%= id %>.jpg" data-bigSrc="images/gallery/project_<%= id %>.jpg" data-repo="<%= repo %>" alt="<%= name %>" />
                 <div class="project-el--thumb-overlay">

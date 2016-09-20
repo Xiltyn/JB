@@ -49,7 +49,7 @@ function fadeMe(element, effect) {
 	    $(this).delay(time).fadeIn(1000).addClass(effect);
 	    time += 500;
 	});
-  console.log('fadeMe fired un :: Element: ' + $element + ' with Effect: ' + effect);
+  // console.log('fadeMe fired un :: Element: ' + $element + ' with Effect: ' + effect);
 }
 
 function scrollToElement() {
@@ -97,7 +97,7 @@ function onScrollEffect(offsetElement, effectElement, effect, callback) {
       }
     }
     this.previousTop = currentTop;
-    console.log(this.previousTop);
+    // console.log(this.previousTop);
   });
   if(typeof callback == 'function')
   callback();
@@ -123,7 +123,7 @@ function onScrollFunction(offsetElement, effectFunction) {
       }
     }
     this.previousTop = currentTop;
-    console.log(this.previousTop);
+    // console.log(this.previousTop);
   });
 }
 
@@ -330,8 +330,36 @@ function injectGallery() {
 // Function wide variables
 // ============================================================::||:>
   var $projectElements;
+  var $projectBtns;
 
-  // Function parsing data into Underscore.js template
+  // Function parsing projects data into Underscore.js template
+  // ==========================================================::||:>
+  function renderBtns(data) {
+    var $template        = _.template($('#catTemp').html());
+    var $wrapper         = $('#navAjax');
+    var $objects         = Array.prototype.slice.call(data.projects)
+    var $fragment        = $(document.createDocumentFragment());
+
+    var result = $objects.reduce(function(memo, e1){
+      var matches = memo.filter(function(e2){
+        return e1.category == e2.category
+      })
+      if (matches.length == 0)
+        memo.push(e1)
+        return memo;
+    }, [])
+
+    result.forEach(function(element) {
+      $fragment.append($template({
+        category: element.category
+      }));
+    });
+
+    $wrapper.append($fragment);
+    $projectBtns = $('.category-btn');
+  };
+
+  // Function parsing projects data into Underscore.js template
   // ==========================================================::||:>
   function render(data) {
     var $template        = _.template($('#projTemp').html());
@@ -342,6 +370,7 @@ function injectGallery() {
     $objects.forEach(function(element) {
       $fragment.append($template({
         id: element.id,
+        category: element.category,
         name: element.name,
         desc: element.desc,
         repo: element.repo
@@ -441,6 +470,7 @@ function injectGallery() {
   // ==========================================================::||:>
   function success(success) {
     render(success);
+    renderBtns(success);
     showProjects();
     showLightbox()
   }
