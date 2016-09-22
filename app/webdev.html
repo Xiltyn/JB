@@ -440,7 +440,7 @@
       </a>
     </section>
     <section id="projects">
-      <div class="container">
+      <div class="container projects-wrapper">
         <div class="row">
           <div id="scroll-projects" class="col-sm-12">
             <h2 class="text-center">
@@ -451,7 +451,11 @@
         <nav id="projects-nav" class="row">
           <div class="col-sm-12">
             <ul id="navAjax">
-
+              <li class="category-btn all-btn">
+                <a href="">
+                  all
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -476,7 +480,9 @@
 
           <script type="text/template" id="catTemp">
             <li class="category-btn" data-category="<%= category %>">
-              <%= category %>
+              <a href="">
+                <%= category %>
+              </a>
             </li>
           </script>
 

@@ -386,7 +386,8 @@ function injectGallery() {
   function showProjects() {
     var currentTop = $(window).scrollTop();
     var offsetElement = $('#projects');
-    var elementGroup = $('.project-el');
+    var elementGroupOne = $('.project-el');
+    var elementGroupTwo = $('.category-btn');
 
     $(window).scroll( {previousTop: 0},
       function() {
@@ -395,7 +396,18 @@ function injectGallery() {
         if ($(window).scrollTop() > offset) {
           if (currentTop < this.previousTop) {
           } else {
-            elementGroup.each(function(i) {
+            elementGroupOne.each(function(i) {
+              var element = $(this);
+              setTimeout(function() {
+                element.addClass('animated fadeIn');
+              }, 150*i);
+            });
+          }
+        }
+        if ($(window).scrollTop() > offset) {
+          if (currentTop < this.previousTop) {
+          } else {
+            elementGroupTwo.each(function(i) {
               var element = $(this);
               setTimeout(function() {
                 element.addClass('animated fadeIn');
@@ -420,7 +432,6 @@ function injectGallery() {
     var spinner = $('.spinner');
 
     function hideLoader() {
-
       spinner.css('opacity', '0');
     }
 
@@ -462,6 +473,29 @@ function injectGallery() {
     })
   }
 
+  function toggleCategory() {
+    var $btn = $('.category-btn');
+    var $allBtn = $('.all-btn');
+    var $el = $('.project-el');
+
+    $btn.on('click', function() {
+      var $btnCat = $(this).attr('data-category');
+      if ($(this).hasClass('all-btn')) {
+        $el.show();
+      } else {
+        $el.each(function() {
+          var $th = $(this);
+          var $elCat = $th.data('category');
+          if ($elCat == $btnCat) {
+            $th.show();
+          } else {
+            $th.hide();
+          }
+        })
+      }
+    })
+  }
+
   // AJAX deprecated call
   // ==========================================================::||:>
   $.when($.ajax('data.json')).then(success, failure);
@@ -472,7 +506,8 @@ function injectGallery() {
     render(success);
     renderBtns(success);
     showProjects();
-    showLightbox()
+    showLightbox();
+    toggleCategory();
   }
 
   // Callback function called when objects fail to be loaded
