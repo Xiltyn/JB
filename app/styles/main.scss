@@ -9,6 +9,7 @@ $icon-font-path: '../fonts/';
 @import "animations";
 @import "animate";
 @import "hover";
+@import "shadows";
 @import "variables";
 
 a {
@@ -671,7 +672,73 @@ body {
   }
 }
 
+#testimonial {
+  height: 300px;
+  width: 100%;
+  z-index: 1000;
+  .tes-wrapper {
+    width: 100%;
+    height: 100%;
+    &-body {
+      list-style: none;
+      .tes-el {
+        padding: 50px;
+        text-align: center;
+        &-img {
+          height: 125px;
+          width: auto;
+          margin-bottom: 25px;
+        }
+        &-txt {
+          position: relative;
+          &-icn {
+            font-size: 7rem;
+            color: #fff;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            margin-left: -400px;
+            opacity: 0.3;
+          }
+          &-author {
+            font-style: italic;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
 
+#contact {
+  background-color: $base-grey;
+  min-height: 120vh;
+  background-image: url('../images/contact_bg.jpg');
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#footer {
+  height: 300px;
+  background-color: $base-grey;
+  .jb-logo {
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -150px;
+    color: $base-grey;
+    z-index: 1500;
+    text-shadow: $up-text-shadow;
+    h3 {
+      width: 100%;
+      text-align: center;
+      font-size: 15rem;
+      letter-spacing: -2.8rem;
+    }
+  }
+}
 
 .separator {
   height: 20px;

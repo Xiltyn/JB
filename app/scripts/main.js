@@ -498,7 +498,7 @@ function injectGallery() {
 
   // AJAX deprecated call
   // ==========================================================::||:>
-  $.when($.ajax('data.json')).then(success, failure);
+  $.when($.ajax('projects.json')).then(success, failure);
 
   // Callback function called when objects are successfully loaded
   // ==========================================================::||:>
