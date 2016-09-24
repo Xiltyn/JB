@@ -1,0 +1,74 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "HTML5",
+      "level": 90,
+      "category": "webdev",
+      "imgSrc": "html.png"
+    },
+    {
+      "id": 2,
+      "name": "CSS3",
+      "level": 80,
+      "category": "webdev",
+      "imgSrc": "css3.png"
+    },
+    {
+      "id": 3,
+      "name": "jQuery",
+      "level": 40,
+      "category": "webdev",
+      "imgSrc": "jquery.png"
+    },
+    {
+      "id": 4,
+      "name": "GIT",
+      "level": 60,
+      "category": "webdev",
+      "imgSrc": "git.png"
+    },
+    {
+      "id": 5,
+      "name": "WordPress",
+      "level": 60,
+      "category": "webdev",
+      "imgSrc": "wordpress.png"
+    },
+    {
+      "id": 6,
+      "name": "Photoshop",
+      "level": 90,
+      "category": "design",
+      "imgSrc": "ps.png"
+    },
+    {
+      "id": 7,
+      "name": "Illustrator",
+      "level": 60,
+      "category": "design",
+      "imgSrc": "ai.png"
+    },
+    {
+      "id": 8,
+      "name": "Lightroom",
+      "level": 85,
+      "category": "design",
+      "imgSrc": "lr.png"
+    },
+    {
+      "id": 9,
+      "name": "InDesign",
+      "level": 30,
+      "category": "design",
+      "imgSrc": "id.png"
+    },
+    {
+      "id": 10,
+      "name": "RWD",
+      "level": 75,
+      "category": "design",
+      "imgSrc": "rwd.png"
+    }
+  ]
+}

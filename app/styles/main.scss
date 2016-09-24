@@ -458,12 +458,13 @@ body {
         font-size: $subsubheader;
         z-index: 300;
       }
-      .skills-els {
+      .skills-category {
         width: 100%;
         margin: 0;
         .el {
           height: 160px;
-          padding: 5px 20px;
+          padding: 5px 35px;
+          width: 20%;
           &--bar {
             position: relative;
             // background-color: rgba(255, 255, 255, 0.5);
@@ -496,13 +497,25 @@ body {
             }
             &-txt {
               position: absolute;
-              top: 50px;
-              left: 100px;
+              top: 35px;
+              left: 150px;
               width: 100%;
               text-align: center;
               transition: all 0.5s cubic-bezier(.32,.8,.44,1);
               h3 {
                 font-size: 1.5rem;
+              }
+            }
+            &-level {
+              position: absolute;
+              top: 70px;
+              left: -150px;
+              width: 100%;
+              text-align: center;
+              transition: all 0.5s cubic-bezier(.32,.8,.44,1);
+              h4 {
+                font-size: 1.6rem;
+                font-weight: 800;
               }
             }
           }
@@ -513,6 +526,9 @@ body {
               left: -100px;
             }
             &-txt{
+              left: 0;
+            }
+            &-level {
               left: 0;
             }
           }
@@ -547,6 +563,7 @@ body {
         padding: 0;
         li {
           margin: auto;
+          padding: 0 10px;
           font-size: 2.5rem;
           opacity: 0.5;
           transition: all 0.3s cubic-bezier(0.1,0.02,0.32,1);
@@ -554,12 +571,26 @@ body {
           min-width: 100px;
           cursor: pointer;
           opacity: 0;
+          color: rgba(255, 255, 255, 0.6);
+          border-left: 1px solid rgba(255, 255, 255, 0);
+          border-right: 1px solid rgba(255, 255, 255, 0);
           a {
             pointer-events: none;
           }
         }
         li:hover {
           opacity: 1;
+          border-left: 1px solid rgba(255, 255, 255, 0.6);
+          border-right: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .inactive {
+          animation: none;
+          opacity: 0.3;
+        }
+        .active {
+          opacity: 1;
+          border-left: 1px solid rgba(255, 255, 255, 0.6);
+          border-right: 1px solid rgba(255, 255, 255, 0.6);
         }
       }
     }
@@ -726,7 +757,7 @@ body {
     width: 300px;
     top: 0;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -170px;
     margin-top: -150px;
     color: $base-grey;
     z-index: 1500;
