@@ -69,6 +69,13 @@
       "level": 75,
       "category": "design",
       "imgSrc": "rwd.png"
+    },
+    {
+      "id": 11,
+      "name": "Bootstrap",
+      "level": 40,
+      "category": "webdev",
+      "imgSrc": "bootstrap.png"
     }
   ]
 }

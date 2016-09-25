@@ -266,6 +266,7 @@ function showQuote() {
 // ============================================================::||:>
 
   function injectSkills() {
+    var $skills;
 
     // Function parsing data into Underscore.js template
     // ==========================================================::||:>
@@ -280,7 +281,7 @@ function showQuote() {
       console.log($objects);
       $objects.forEach(function(element) {
 
-        if (element.category == "webdev") {
+        if (element.category == 'webdev') {
 
           $fragmentWebdev.append($template({
             id: element.id,
@@ -290,7 +291,7 @@ function showQuote() {
             imgSrc: element.imgSrc
           }));
 
-        } else if (element.category == "design") {
+        } else if (element.category == 'design') {
 
           $fragmentDesign.append($template({
             id: element.id,
@@ -302,14 +303,30 @@ function showQuote() {
 
         } else {
 
-          console.log("sad element without a category screaaaams to You! @_@!!");
+          console.log('sad element without a category screaaaams to You! @_@!!');
 
         }
       });
 
       $webdev.append($fragmentWebdev);
       $design.append($fragmentDesign);
+      $skills = $('.el');
     };
+
+    function setElementWidth() {
+      var $webdevSkills = $(".el[data-cat='webdev']");
+      var $designSkills = $(".el[data-cat='design']");
+      var $webNum       = $webdevSkills.length;
+      var $desNum       = $designSkills.length;
+
+      $webdevSkills.each(function() {
+        var width = 100 / $webNum + "%"
+        var $th = $(this);
+
+        console.log(width);
+        $th.css('width', width)
+      })
+    }
 
     function showSkills() {
       var offsetElement    =  $('#scroll-skills');
@@ -382,15 +399,16 @@ function showQuote() {
 
     // AJAX deprecated call
     // ==========================================================::||:>
-    $.when($.ajax("skills.json")).then(success, failure);
+    $.when($.ajax('skills.json')).then(success, failure);
 
     // Callback function called when objects are successfully loaded
     // ==========================================================::||:>
     function success(success) {
-      console.log("Yes! Success!");
+      console.log('Yes! Success!');
       render(success);
       showSkills();
       showSkillName();
+      setElementWidth();
     }
 
     // Callback function called when objects fail to be loaded
