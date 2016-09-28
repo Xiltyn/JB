@@ -314,13 +314,13 @@ function showQuote() {
     };
 
     function setElementWidth() {
-      var $webdevSkills = $(".el[data-cat='webdev']");
-      var $designSkills = $(".el[data-cat='design']");
+      var $webdevSkills = $('.el[data-cat=\'webdev\']');
+      var $designSkills = $('.el[data-cat=\'design\']');
       var $webNum       = $webdevSkills.length;
       var $desNum       = $designSkills.length;
 
       $webdevSkills.each(function() {
-        var width = 100 / $webNum + "%"
+        var width = 100 / $webNum + '%'
         var $th = $(this);
 
         console.log(width);

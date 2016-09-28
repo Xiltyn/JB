@@ -300,6 +300,9 @@
           </div>
         </div>
       </div>
+      <a href="#testimonial">
+        <div class="scroll-button animated infinite pulse"></div>
+      </a>
     </section>
 
     <!-- TESTIMONIALS -->
@@ -339,7 +342,7 @@
         </div>
         <div class="row contact-bubbles">
           <div class="col-sm-3 col-md-2 col-md-offset-2 text-center">
-            <div class="bubble data-media="twitter"">
+            <div class="bubble" data-media="twitter">
               <svg class="icn icn-twitter">
                 <use xlink:href="symbol-defs.svg#icn-twitter">
                 </use>
@@ -347,7 +350,7 @@
             </div>
           </div>
           <div class="col-sm-3 col-md-2 text-center">
-            <div class="bubble data-media="linkedin"">
+            <div class="bubble" data-media="linkedin">
               <svg class="icn icn-linkedin">
                 <use xlink:href="symbol-defs.svg#icn-linkedin">
                 </use>
@@ -355,7 +358,7 @@
             </div>
           </div>
           <div class="col-sm-3 col-md-2 text-center">
-            <div class="bubble data-media="email"">
+            <div class="bubble" data-media="email">
               <svg class="icn icn-mail">
                 <use xlink:href="symbol-defs.svg#icn-mail4">
                 </use>
@@ -363,7 +366,7 @@
             </div>
           </div>
           <div class="col-sm-3 col-md-2 text-center">
-            <div class="bubble data-media="phone"">
+            <div class="bubble" data-media="phone">
               <svg class="icn icn-phone">
                 <use xlink:href="symbol-defs.svg#icn-phone">
                 </use>
@@ -379,11 +382,14 @@
             </h3>
             <div id="map">
             </div>
+            <div class="map-overlay">
+
+            </div>
             <script>
               function initMap() {
-                var uluru = {lat: -25.363, lng: 131.044};
+                var uluru = {lat: 50.05, lng: 19.95};
                 var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 4,
+                  zoom: 10,
                   center: uluru
                 });
                 var marker = new google.maps.Marker({

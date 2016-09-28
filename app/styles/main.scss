@@ -699,7 +699,7 @@ body {
     }
   }
   .scroll-button {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 }
 
@@ -785,13 +785,37 @@ body {
     }
     &-map {
       height: 500px;
+      position: relative;
       #map {
         margin-top: 50px;
         margin-bottom: 175px;
         height: 550px;
         border-radius: 50%;
         border: 5px solid $base-grey;
-        opacity: 0.8;
+        opacity: 0.6;
+        transition: all 0.2s ease-out;
+      }
+
+      .map-overlay {
+        margin-top: 101px;
+        height: 540px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 93.2%;
+        background-color: $base-grey;
+        opacity: 0.3;
+        transition: all 0.2s ease-out;
+      }
+
+    }
+    &-map:hover {
+      #map {
+        opacity: 0.9;
+      }
+      .map-overlay {
+        opacity: 0;
       }
     }
   }
