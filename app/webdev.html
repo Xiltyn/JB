@@ -329,6 +329,75 @@
     <!-- CONTACT -->
 
     <section id="contact">
+      <div class="contact container">
+        <div class="row contact-header">
+          <div class="col-sm-12">
+            <h2 class="text-center contact-header-txt">
+              Get in touch
+            </h2>
+          </div>
+        </div>
+        <div class="row contact-bubbles">
+          <div class="col-sm-3 col-md-2 col-md-offset-2 text-center">
+            <div class="bubble data-media="twitter"">
+              <svg class="icn icn-twitter">
+                <use xlink:href="symbol-defs.svg#icn-twitter">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-2 text-center">
+            <div class="bubble data-media="linkedin"">
+              <svg class="icn icn-linkedin">
+                <use xlink:href="symbol-defs.svg#icn-linkedin">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-2 text-center">
+            <div class="bubble data-media="email"">
+              <svg class="icn icn-mail">
+                <use xlink:href="symbol-defs.svg#icn-mail4">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-2 text-center">
+            <div class="bubble data-media="phone"">
+              <svg class="icn icn-phone">
+                <use xlink:href="symbol-defs.svg#icn-phone">
+                </use>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="row contact-map">
+          <div class="col-sm-6 col-sm-offset-3">
+            <h3 class="text-center">
+              You can find me here
+            </h3>
+            <div id="map">
+            </div>
+            <script>
+              function initMap() {
+                var uluru = {lat: -25.363, lng: 131.044};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 4,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2syKmz-UM34NeEFQFtxWIU-X9s7hsev0&callback=initMap">
+            </script>
+          </div>
+        </div>
+      </div>
 
     </section>
 
