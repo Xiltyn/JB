@@ -23,16 +23,28 @@ gulp
 ```
 ..as it's the default task. 
 
+This project is using 
+- jQuery
+- underscore.js
+- bootstrap
+- SASS
+
+Development version files are located in the **app** folder. Gulp hosts pre-compiled SCSS from **.tmp** folder. Compiled version will be placed in the **dist** folder.
+
+Gulp tasks include also browser sync plugin also accross local network. Use _external localhost link_ to sync from another device
+
 Enjoy!
 
 ## Progress
 
+!RWD currently not supported ;( 
+
 ### Pages
 ******
-#### Home
+#### Home (index.html)
 *Done*
 
-#### Webdev 
+#### Webdev (webdev.html)
 *Currenlty in progress. Will be used as a template for Calligraphy page*
 ##### Sections 
 - **Header** - **DONE** :: version2; animations; menu; setTimeout triggers | **TODO** :: adding links to buttons in menu and the Git button; seearch (do I need it?)
@@ -46,8 +58,8 @@ Enjoy!
 **SECTIONS TODO** :: 
 none at the moment
 
-#### Calligraphy
+#### Calligraphy (calligraphy.html)
 *Will be created as a sibling page of WebDev with slightly different objects adapted to the content differences. It will also be created in reddish theme instead of the Webdev's blue one.*
 
-#### About Me
+#### About Me (about.html)
 _I'm considering to create a very small page with some more information about me, short introduction, academic experience, hobbies and stuff like that. **Not needed in MVP**_
