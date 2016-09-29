@@ -8,18 +8,18 @@ I'm using [Yeoman](http://yeoman.io/) with its [webApp generator](https://github
 After cloning, you just need to run:
 
 ```
-bower install
-npm install 
+$ bower install
+$ npm install 
 ```
 
 In order to start localhost and get all gulp tasks running, run:
 ```
-gulp serve
+$ gulp serve
 ```
 
 To compile and put files on production, run:
 ```
-gulp
+$ gulp
 ```
 ..as it's the default task. 
 
