@@ -616,6 +616,44 @@ function showQuote() {
 
   }
 
+  // ============================================================::||:>
+  // ====================== S I D E  N A V ======================::||:>
+  // ============================================================::||:>
+
+  function radioCheck() {
+    var $navElement = $('.nav-wrapper-el');
+
+    $navElement.each(function() {
+      var $th = $(this);
+      var scrollTo = $th.attr('data-scrollTo');
+      var currentTop = $(window).scrollTop();
+
+        $(window).scroll({
+            previousTop: 0
+          },
+
+        function() {
+          // define the header height here
+          var headerHeight = $('#' + scrollTo).offset().top - 20;
+          // if user has scrolled past header, initiate the scroll up/scroll down hide show effect
+          if ($(window).scrollTop() > headerHeight) {
+            if (currentTop < this.previousTop) {
+              var icn = $th.find('use');
+
+              icn.attr('xlink:href', 'symbol-defs.svg#icn-radio-unchecked');
+            } else {
+              var icn = $th.find('use');
+
+              icn.attr('xlink:href', 'symbol-defs.svg#icn-radio-checked');
+              console.log(icn);
+            }
+          }
+          this.previousTop = currentTop;
+          console.log(currentTop);
+        });
+      });
+  }
+
 // Global callbacks
 // ==============================================================::||:>
   injectSkills();
@@ -626,6 +664,7 @@ function showQuote() {
   scrollButtonClick();
   scrollToElement();
   showOverview();
-  toTopBtn();
+  // toTopBtn();
+  radioCheck();
 
 })(window.$, window._);
