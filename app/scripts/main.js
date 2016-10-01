@@ -679,13 +679,13 @@ function showQuote() {
 
     // AJAX deprecated call
     // ==========================================================::||:>
-    $.when($.ajax("testimonials.json")).then(success, failure);
+    $.when($.ajax('testimonials.json')).then(success, failure);
 
     // Callback function called when objects are successfully loaded
     // ==========================================================::||:>
     function success(success) {
       render(success);
-      console.log("Yay! Testimonials loaded!");
+      console.log('Yay! Testimonials loaded!');
       testimonialCarousel();
     }
 
