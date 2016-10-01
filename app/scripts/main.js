@@ -278,7 +278,7 @@ function showQuote() {
       var $fragmentWebdev  = $(document.createDocumentFragment());
       var $fragmentDesign  = $(document.createDocumentFragment());
 
-      console.log($objects);
+      // console.log($objects);
       $objects.forEach(function(element) {
 
         if (element.category == 'webdev') {
@@ -323,7 +323,7 @@ function showQuote() {
         var width = 100 / $webNum + '%'
         var $th = $(this);
 
-        console.log(width);
+        // console.log(width);
         $th.css('width', width)
       })
     }
@@ -377,7 +377,7 @@ function showQuote() {
           }
         }
         this.previousTop = currentTop;
-        console.log(this.previousTop);
+        // console.log(this.previousTop);
       });
     }
 
@@ -389,10 +389,7 @@ function showQuote() {
 
         $(this).on('mouseover', function() {
           $icn.addClass('el--bar-icn-active');
-          console.log('Mousing over ' + $icn);
-          // $(this).on('mouseleave', function() {
-          //   $icn.removeClass('el--bar-icn-active');
-          // })
+          // console.log('Mousing over ' + $icn);
         })
       })
     }
@@ -645,26 +642,119 @@ function showQuote() {
               var icn = $th.find('use');
 
               icn.attr('xlink:href', 'symbol-defs.svg#icn-radio-checked');
-              console.log(icn);
-            }
+              // console.log(icn);
+              }
           }
           this.previousTop = currentTop;
-          console.log(currentTop);
+          // console.log(currentTop);
         });
       });
   }
+
+  // ============================================================::||:>
+  // ================== T E S T I M O N I A L S =================::||:>
+  // ============================================================::||:>
+
+  function injectTestimonials() {
+
+    // Function parsing data into Underscore.js template
+    // ==========================================================::||:>
+    function render(data) {
+      var $template        = _.template($('#testTemp').html());
+      var $wrapper         = $('#testimonialsAjax');
+      var $objects         = data.testimonials;
+      var $fragment        = $(document.createDocumentFragment());
+
+      $objects.forEach(function(element) {
+        $fragment.append($template({
+          id: element.id,
+          content: element.quote,
+          author: element.author,
+          imgSrc: element.imgSrc
+        }));
+      });
+
+      $wrapper.append($fragment);
+    };
+
+    // AJAX deprecated call
+    // ==========================================================::||:>
+    $.when($.ajax("testimonials.json")).then(success, failure);
+
+    // Callback function called when objects are successfully loaded
+    // ==========================================================::||:>
+    function success(success) {
+      render(success);
+      console.log("Yay! Testimonials loaded!");
+      testimonialCarousel();
+    }
+
+    // Callback function called when objects fail to be loaded
+    // ==========================================================::||:>
+    function failure() {
+        console.log('ups! Testimonials didnt load properly');
+    }
+  }
+  function testimonialCarousel() {
+    //grab the width and calculate left value
+    var item_width = $('#slides li').outerWidth();
+    var left_value = item_width * (-1);
+
+    //move the last item before first item, just in case user click prev button
+    $('#slides li:first').before($('#slides li:last'));
+    //set the default item to the correct position
+    $('#slides ul').css({'left' : left_value});
+    //if user clicked on prev button
+    $('#next').click(function() {
+      //get the right position
+      var left_indent = parseInt($('#slides ul').css('left')) + item_width;
+
+      //slide the item
+      $('#slides ul').animate({'left' : left_indent}, 400,function(){
+
+        //move the last item and put it as first item
+        $('#slides li:first').before($('#slides li:last'));
+        //set the default item to correct position
+        $('#slides ul').css({'left' : left_value});
+      });
+
+      //cancel the link behavior
+      return false;
+    });
+
+    //if user clicked on next button
+    $('#prev').click(function() {
+      //get the right position
+      var left_indent = parseInt($('#slides ul').css('left')) - item_width;
+
+      //slide the item
+      $('#slides ul').animate({'left' : left_indent}, 400, function () {
+        //move the first item and put it as last item
+        $('#slides li:last').after($('#slides li:first'));
+        //set the default item to correct position
+        $('#slides ul').css({'left' : left_value});
+
+      });
+      //cancel the link behavior
+      return false;
+
+    });
+  };
+
+
 
 // Global callbacks
 // ==============================================================::||:>
   injectSkills();
   injectGallery();
+  injectTestimonials();
   toggleMenu();
   showHeader();
   jbControl();
   scrollButtonClick();
   scrollToElement();
   showOverview();
-  // toTopBtn();
+  // toTopBtn(); <-- Legacy function
   radioCheck();
 
 })(window.$, window._);

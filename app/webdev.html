@@ -358,9 +358,36 @@
     <!-- TESTIMONIALS -->
 
     <section id="testimonial" class="shadow3">
-      <div class="container">
+      <div class="container-fluid">
 
-        <div class="row tes-wrapper">
+        <div id="carousel">
+        	<div id="buttons">
+        		<a href="#" id="prev">
+              <svg class="tes-el-txt-icn icn icn-circle-left">
+                <use xlink:href="symbol-defs.svg#icn-circle-left"></use>
+              </svg>
+            </a>
+        		<a href="#" id="next">
+              <svg class="tes-el-txt-icn icn icn-circle-right">
+                <use xlink:href="symbol-defs.svg#icn-circle-right"></use>
+              </svg>
+            </a>
+        		<div class="clear"></div>
+        	</div>
+
+        	<div class="clear"></div>
+
+        	<div id="slides" class="row tes-wrapper">
+        		<ul id="testimonialsAjax"class="col-sm-12 tes-wrapper-body">
+
+
+        		</ul>
+        		<div class="clear"></div>
+        	</div>
+
+        </div>
+
+        <!-- <div class="row tes-wrapper">
           <ul class="col-sm-12 tes-wrapper-body">
             <li class="tes-el">
               <img class="tes-el-img" src="images/qba_av.png" alt="" />
@@ -374,7 +401,7 @@
                 </span>
               </p>
             </li>
-          </div>
+          </div> -->
       </div>
       </div>
     </section>
@@ -519,6 +546,22 @@
             </div>
           </div>
         </div>
+      </script>
+
+      <!-- Testimonials element template -->
+
+      <script type="text/template" id="testTemp">
+
+        <li class="tes-el">
+          <img class="tes-el-img" src="images/testimonials/<%= imgSrc %>" alt="author: <%= author %>" />
+          <p class="tes-el-txt">
+            <%= content %>
+            <span class="tes-el-txt-author">
+              <br><%= author %>
+            </span>
+          </p>
+        </li>
+
       </script>
 
     <!-- end:Underscore.js templates -->
