@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "Moxxy",
+      "quote": "Nice service, good contact. What else is there to say :p",
+      "imgSrc": "person1.png"
+    },
+    {
+      "id": 2,
+      "author": "Amanda",
+      "quote": "Fun working with this guy. Does the job.",
+      "imgSrc": "person2.png"
+    },
+    {
+      "id": 3,
+      "author": "Steve",
+      "quote": "Whatever a testionial might actually say should go here :D",
+      "imgSrc": "person3.png"
+    }
+  ]
+}

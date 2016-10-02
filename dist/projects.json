@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "category": "webdev",
+      "name": "Project 1",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project1.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 2,
+      "category": "webdev",
+      "name": "Project 2",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project2.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 3,
+      "category": "webdev",
+      "name": "Project 3",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project3.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 4,
+      "category": "webdev",
+      "name": "Project 4",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project4.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 5,
+      "category": "webdev",
+      "name": "Project 5",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project5.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 6,
+      "category": "design",
+      "name": "Project 6",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project6.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 7,
+      "category": "design",
+      "name": "Project 7",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project7.jpg",
+      "repo": "#"
+    },
+    {
+      "id": 8,
+      "category": "calligraphy",
+      "name": "Project 8",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgSrc": "project8.jpg",
+      "repo": "#"
+    }
+  ]
+}
