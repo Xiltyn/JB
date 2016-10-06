@@ -567,6 +567,59 @@ body {
   .scroll-button {
     margin-top: -70px;
   }
+  .offer {
+    padding: 200px 0;
+    &-nav {
+      &-icn {
+        padding-top: 15px;
+        font-size: 7rem;
+        transition: all 0.3s ease-out;
+      }
+      .active {
+        background-color: $base-red;
+        opacity: 1;
+      }
+      &-icn:hover {
+        background-color: $base-red;
+        opacity: 1;
+
+      }
+    }
+    &-content {
+      position: relative;
+      height: 600px;
+      &-el {
+        display: none;
+        height: 100%;
+        background-color: $base-red;
+        padding: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        h3 {
+          padding: 10px 0 30px 0;
+        }
+        p {
+          text-align: justify;
+          padding: 0 50% 0 0;
+        }
+        img {
+          position: absolute;
+          top: 100%;
+          left: 100%;
+          z-index: 100;
+          height: 525px;
+          width: 350px;
+          margin-top: -590px;
+          margin-left: -450px;
+          border: none !important;
+        }
+      }
+      .active {
+        display: block;
+      }
+    }
+  }
 }
 
 #projects {
