@@ -1,28 +1,47 @@
 (function($,_) {
 
-  function offerNavToggle() {
+// ============================================================::||:>
+// ======================== O F F E R =========================::||:>
+// ============================================================::||:>
+
+  function toggleNav() {
     var $btn = $('.offer-nav-icn');
 
     $btn.on('click', function(){
       var $that = $(this);
-      var all = $('.offer-nav-icn');
+      var $btns = $('.offer-nav-icn');
+      var $content = $('.offer-content-el');
+      var btnData = $that.data('type');
 
-      all.each(function(){
+      $btns.each(function(){
         var $th = $(this);
+
         if ($th.hasClass('active')) {
           $th.removeClass('active');
         };
+
         if ($that.hasClass('active')) {
 
         } else {
           $that.addClass('active');
         }
       });
+
+      $content.each(function() {
+          var $th = $(this);
+          var thData = $th.data('type');
+
+          $th.removeClass('active');
+
+          if ($th.hasClass('active')) {
+            $th.removeClass('active')
+          } else if (thData == btnData) {
+              $th.addClass('active');
+          }
+      });
     });
   }
 
-
-
-offerNavToggle();
+toggleNav();
 
 })(window.$, window._);

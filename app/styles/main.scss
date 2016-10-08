@@ -580,21 +580,28 @@ body {
       &-icn {
         height: 25%;
         border-right: 3px solid #fff;
-        padding-top: 35px;
+        padding-top: 3.2rem;
         font-size: 7rem;
-        transition: background-color 0.3s ease-out;
+        transition: background-color 0.3s ease-out, padding-top 0.2s ease-out, font-size 0.25s ease-out;
+      }
+      &-icn:hover {
+        padding-top: 3rem;
+        padding-left: -0.3rem;
+        font-size: 8rem;
       }
       .active {
-        padding-top: 32px;
+        padding-top: 2.8rem;
         background-color: $base-red;
         border-left: 3px solid #fff;
         border-top: 3px solid #fff;
         border-bottom: 3px solid #fff;
         border-right: none !important;
+        font-size: 8rem;
       }
-      &-icn:hover {
-        background-color: $base-red;
+      .active:hover {
+        padding-top: 2.8rem;
       }
+
     }
     &-content {
       position: relative;
