@@ -461,7 +461,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom;
-  padding: 100px 0;
+  padding: 400px 0 100px 0;
   .skills-header {
     h2 {
       font-size: $header;
@@ -569,7 +569,8 @@ body {
   }
   .offer {
     position: relative;
-    margin: 200px 0 200px 0;
+    margin: 75px 0 150px 0;
+    opacity: 0;
     &-nav {
       left: 0;
       top: 0;

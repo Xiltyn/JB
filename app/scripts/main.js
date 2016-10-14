@@ -762,6 +762,9 @@ function showQuote() {
 
     function offerControl() {
       var $btn = $('.offer-nav-icn');
+      var offsetElement = $('#scroll-skills');
+      var effectElement = '.offer';
+      var effect = 'animated fadeInUp';
 
       $btn.on('click', function(){
         var $that = $(this);
@@ -796,6 +799,8 @@ function showQuote() {
             }
         });
       });
+
+      onScrollEffect(offsetElement, effectElement, effect)
     }
 
 
