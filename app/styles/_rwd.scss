@@ -1,0 +1,94 @@
+@media screen and (max-width:600px) {
+  #header {
+    background-size: auto 100%;
+    background-position: right bottom;
+    .header-top {
+      &--pos {
+        top: 1%;
+      }
+      &--left {
+        &-avatar {
+          width: 100%;
+          margin-left: 25%;
+        }
+        &-name {
+          text-align: center;
+          padding-bottom: 20px;
+          margin:auto;
+          margin-top: 50px;
+          width: 150%;
+        }
+        &-occupation {
+          width: 150%;
+          margin: auto;
+          text-align: center;
+          font-size: 2.2rem;
+          line-height: 2.6rem;
+          margin-top: 10px;
+          margin-bottom: 60px;
+        }
+      }
+      &--right {
+        z-index: 5;
+        &--dummy {
+          position: absolute;
+          left: 50%;
+          margin-left: -45%;
+          width: 70%;
+        }
+        .text-center {
+          padding-top: 4%;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  #overview {
+    margin-top: -50vh;
+    padding-top: 450px;
+    background-repeat: no-repeat;
+    background-size: auto 100% ;
+    z-index: 10;
+    .overview-wrapper {
+      padding: 50px 0 200px 0;
+      text-align: justify;
+      height: auto;
+      z-index: 0;
+      .scroll-button {
+        margin-top: -435px;
+      }
+      &--pos {
+
+      }
+      &-el {
+        // border: 1px solid white;
+        padding: 100px 0;
+        height: 500px;
+        &-icn {
+          margin: auto;
+          width: 15rem;
+          font-size: 15rem;
+        }
+        &-desc:after {
+          width: 50%;
+          height: 2px;
+          background-color: #fff;
+          position: absolute;
+        }
+        &-desc {
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          padding: 0 50px;
+          h3 {
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+    .scroll-button {
+      margin-top: -100px;
+    }
+  }
+}

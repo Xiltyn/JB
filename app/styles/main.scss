@@ -37,6 +37,7 @@ a:focus {
 body {
   font-family: $arkhip;
   color: #fff;
+  background-color: $base-grey;
 }
 
 #jb {
@@ -254,13 +255,6 @@ body {
         }
       }
     }
-    &--search {
-      padding-top: 0px;
-      a {
-        line-height: 0;
-        padding: 0;
-      }
-    }
     &--home {
       &-btn {
         position: relative;
@@ -374,22 +368,6 @@ body {
       }
     }
   }
-  .header-quote {
-    display: none;
-    &-text {
-      margin-top: 0px;
-      height: 175px;
-      padding-top: 0px;
-      font-size: 1.75rem;
-      p {
-        display: none;
-      }
-      .author {
-        font-style: italic;
-        color: rgba(255, 255, 255, 0.7);
-      }
-    }
-  }
 }
 
 .overview-webdev {
@@ -417,6 +395,7 @@ body {
         margin-top: -500px;
       }
     }
+
     &--pos {
 
     }
@@ -1025,3 +1004,5 @@ body {
 .stop-scrolling {
   overflow: hidden;
 }
+
+@import "rwd";
