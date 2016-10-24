@@ -321,12 +321,26 @@
             </ul>
           </div>
         </nav>
-        <div id="galleryAjax" class="row">
+        <div id="galleryAjax">
 
           <!-- LOADS GALLERY FROM :: P R O J E C T S -->
 
-          <div class="lightbox">
-            <div class="lightbox-wrapper variant-blue">
+          <div class="lightbox row">
+            <div class="lightbox-quit">
+              <svg class="icn icn-cross">
+                <use xlink:href="symbol-defs.svg#icn-cross">
+                </use>
+              </svg>
+
+            </div>
+            <ul class="lightbox-miniatures col-xs-12 col-sm-3">
+              <li></li>
+              <li></li>
+              <li></li>
+              <!-- LOADS MINIATURES -->
+
+            </ul>
+            <div class="lightbox-wrapper col-xs-12 col-sm-9 variant-blue">
               <div class="spinner">
                 <svg class="icn icn-home">
                   <use xlink:href="symbol-defs.svg#icn-spinner10">
@@ -342,6 +356,22 @@
 
                 <!-- LOADS DESCRIPTION -->
 
+              </div>
+              <div class="lightbox-wrapper--btns row">
+                <div class="col-xs-6">
+                  <div class="btn-sq btn-sq--blue">
+                    <div class="btn-sq--hole">
+                      GitHub repo
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="btn-sq btn-sq--blue">
+                    <div class="btn-sq--hole">
+                      Live Demo
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

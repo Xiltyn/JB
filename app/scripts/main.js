@@ -388,7 +388,7 @@ function showQuote() {
 
           setTimeout(function() {
             lightboxImg.html('<img src="' + $imgSrc + '" alt="' + $name + '" />');
-            lightboxTxt.html('<a href="' + $repo + '" target="_blank"><h3 class="animated flash">' + $name + '</h3></a><p>' + $desc + '</p>');
+            lightboxTxt.html('<h3>' + $name + '</h3><p>' + $desc + '</p>');
           }, 300);
         }, 1000);
 
