@@ -312,8 +312,10 @@ function showQuote() {
           category: element.category,
           name: element.name,
           desc: element.desc,
-          repo: element.repo
+          repo: element.repo,
+          thumb: element.pics.pic[0].img
         }));
+        // console.log(pics);
       });
 
       $wrapper.append($fragment);
@@ -364,14 +366,16 @@ function showQuote() {
 
     // Open lightbox on click
     // ==========================================================::||:>
-    function showLightbox() {
+    function showLightbox(data) {
       var lightbox = $('.lightbox');
       var lightboxTxt = $('.lightbox-wrapper--text');
       var lightboxImg = $('.lightbox-wrapper--img');
+      var lightboxMin = $('.lightbox-miniatures');
       var spinner = $('.spinner');
+      var objects = data.projects;
 
       function hideLoader() {
-        spinner.css('opacity', '0');
+
       }
 
       $projectElements.on('click', function(event) {
@@ -380,22 +384,45 @@ function showQuote() {
         var $desc     = $th.find('.project-el--thumb-overlay p').text();
         var $imgSrc   = $th.find('.project-el--thumb img').attr('data-bigSrc');
         var $repo     = $th.find('.project-el--thumb img').attr('data-repo');
+        var $id       = $th.find('.project-el--thumb img').attr('data-id');
+
+        console.log($id);
 
         lightbox.addClass('animated fadeIn').css('pointer-events', 'all');
 
         setTimeout(function() {
-          hideLoader();
+          spinner.css('opacity', '0');
 
           setTimeout(function() {
             lightboxImg.html('<img src="' + $imgSrc + '" alt="' + $name + '" />');
             lightboxTxt.html('<h3>' + $name + '</h3><p>' + $desc + '</p>');
+            objects.forEach(function(element) {
+              if (element.id == $id) {
+                var pics = element.pics.pic;
+                pics.forEach(function(element) {
+                  var img = element.img;
+                  lightboxMin.append('<li class=\'animated fadeInUp\'><img src=\'images/gallery/thumb/' + img + '\'></li>');
+                })
+              }
+            });
+
+            setTimeout(function() {
+              var $thumbs = $('.lightbox-miniatures li');
+
+              $thumbs.on('click', function() {
+                var url = $(this).find('img').attr('src');
+                var split = url.split('/');
+                lightboxImg.html('<img src="images/gallery/' + split[3] + '" />');
+              });
+            }, 100);
           }, 300);
         }, 1000);
 
-        $('html').one('click', function() {
+        $('.lightbox-quit').on('click', function() {
           lightbox.removeClass('animated fadeIn').css('pointer-events', 'none');
           lightboxImg.html('');
           lightboxTxt.html('');
+          lightboxMin.html('');
           spinner.css('opacity', '1');
           $('body').removeClass('stop-scrolling');
         })
@@ -408,7 +435,6 @@ function showQuote() {
           $('body').addClass('stop-scrolling');
         }
 
-        event.stopPropagation();
       })
     }
 
@@ -447,7 +473,7 @@ function showQuote() {
       render(success);
       renderBtns(success);
       showProjects();
-      showLightbox();
+      showLightbox(success);
       toggleCategory();
     }
 

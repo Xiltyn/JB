@@ -724,23 +724,24 @@ body {
       height: 100vh;
       top: 0;
       left: 0;
-      padding: 30px;
+      padding: 50px;
       pointer-events: none;
       z-index: 1500;
       margin: 0;
       &-quit {
         position: absolute;
-        top: 5px;
+        top: 15px;
         left: 100%;
-        margin-left: -50px;
+        margin-left: -40px;
         font-size: 2rem;
         transition: all 0.3s ease-out;
         height: 2rem;
         opacity: 0.5;
+        cursor: pointer;
       }
       &-quit:hover {
         transform: rotate(180deg);
-        top: 7px;
+        top: 17px;
         opacity: 1;
       }
       &-miniatures {
@@ -750,14 +751,16 @@ body {
           height: 120px;
           background-color: $base-blue;
           margin-bottom: 15px;
-          opacity: 0.7;
+          overflow: hidden;
+          cursor: pointer;
           transition: all 0.3s ease-out;
           img {
-
+            width: 100%;
+            height: auto;
           }
         }
         li:hover {
-          opacity: 1;
+          opacity: 1 !important;
         }
       }
       &-wrapper {
@@ -809,6 +812,7 @@ body {
             border: 2px solid #fff;
             margin: 5px auto;
             padding: 1rem;
+            cursor: pointer;
             &--hole {
               text-align: center;
               font-size: 1.7rem;

@@ -370,14 +370,12 @@
               </svg>
 
             </div>
-            <ul class="lightbox-miniatures col-xs-12 col-sm-3">
-              <li></li>
-              <li></li>
-              <li></li>
+            <ul class="lightbox-miniatures col-xs-12 col-sm-3 col-md-2">
+
               <!-- LOADS MINIATURES -->
 
             </ul>
-            <div class="lightbox-wrapper col-xs-12 col-sm-9 variant-red">
+            <div class="lightbox-wrapper col-xs-12 col-sm-9 col-md-8 variant-red">
               <div class="spinner">
                 <svg class="icn icn-home">
                   <use xlink:href="symbol-defs.svg#icn-spinner10">
@@ -594,7 +592,7 @@
       <script type="text/template" id="projTemp">
         <div class="project-el el-<%= id %> col-xs-10 col-sm-6 col-md-4" data-category="<%= category %>">
           <div class="project-el--thumb">
-            <img src="images/gallery/thumb/project_<%= id %>.jpg" data-bigSrc="images/gallery/project_<%= id %>.jpg" data-repo="<%= repo %>" alt="<%= name %>" />
+            <img src="images/gallery/thumb/<%= thumb %>" data-bigSrc="images/gallery/<%= thumb %>" data-id="<%= id %>" data-repo="<%= repo %>" alt="<%= name %>" />
             <div class="project-el--thumb-overlay">
               <h3>
                 <%= name %>

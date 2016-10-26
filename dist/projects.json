@@ -5,7 +5,24 @@
       "category": "webdev",
       "name": "Project 1",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project1.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_1.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_2.jpg"
+          },
+          {
+            "id": 3,
+            "img": "project_3.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -13,7 +30,24 @@
       "category": "webdev",
       "name": "Project 2",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project2.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_2.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_3.jpg"
+          },
+          {
+            "id": 3,
+            "img": "project_5.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -21,7 +55,20 @@
       "category": "webdev",
       "name": "Project 3",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project3.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_3.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_4.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -29,7 +76,28 @@
       "category": "webdev",
       "name": "Project 4",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project4.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_4.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_2.jpg"
+          },
+          {
+            "id": 3,
+            "img": "project_1.jpg"
+          },
+          {
+            "id": 4,
+            "img": "project_7.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -37,7 +105,24 @@
       "category": "webdev",
       "name": "Project 5",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project5.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_5.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_6.jpg"
+          },
+          {
+            "id": 3,
+            "img": "project_7.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -45,7 +130,20 @@
       "category": "design",
       "name": "Project 6",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project6.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_6.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_7.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -53,7 +151,28 @@
       "category": "design",
       "name": "Project 7",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project7.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_7.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_4.jpg"
+          },
+          {
+            "id": 3,
+            "img": "project_2.jpg"
+          },
+          {
+            "id": 4,
+            "img": "project_8.jpg"
+          }
+        ]
+      },
       "repo": "#"
     },
     {
@@ -61,7 +180,20 @@
       "category": "calligraphy",
       "name": "Project 8",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "imgSrc": "project8.jpg",
+      "pics":
+      {
+        "pic":
+        [
+          {
+            "id": 1,
+            "img": "project_8.jpg"
+          },
+          {
+            "id": 2,
+            "img": "project_3.jpg"
+          }
+        ]
+      },
       "repo": "#"
     }
   ]
