@@ -246,13 +246,13 @@ function toTopBtn() {
 
 function jbControl() {
   // config
-  var $element = $('.main-element');
-  var $effectHover = 'animated fadeIn element--hover'
-  var $effectClick = 'animated fadeOut element--click'
+  // var $element = $('.main-element');
+  // var $effectHover = 'animated fadeIn element--hover'
+  // var $effectClick = 'animated fadeOut element--click'
 
   fadeMe('main-element');
-  ElementHover($element, $effectHover);
-  ElementClick($element, $effectClick);
+  // ElementHover($element, $effectHover);
+  // ElementClick($element, $effectClick);
 }
 
 function showQuote() {

@@ -1,21 +1,105 @@
 @media screen and (max-width:600px) {
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  #jb {
+    margin-left: 20px;
+    margin-top: 20%;
+    .row{
+      .main-element {
+        .half {
+          .big-letter {
+            font-size: $big-text-rwd;
+            text-shadow: $base-text-shadow-rwd;
+          }
+          .big-j {
+            letter-spacing: -15px;
+          }
+          .big-b {
+            margin-left: -15px;
+          }
+          .header {
+            color: $base-grey;
+            text-shadow: $base-text-shadow-rwd;
+            font-size: 1.5rem;
+          }
+          .header--webdev {
+            padding-right: 0px;
+          }
+          .header--calligrapher {
+            padding-left: 0px;
+          }
+       }
+        .main-left {
+          width: 14rem;
+          z-index: 200;
+          background-image: none;
+          background-repeat: no-repeat;
+          background-position: 2rem 4.4rem;
+          transition: 0.5s;
+        }
+        .main-right {
+          z-index: 190;
+          background-image: none;
+          background-repeat: no-repeat;
+          background-position: 0.3rem 1.9rem;
+          transition: 0.5s;
+          // margin-left: -30px;
+
+        }
+      }
+      .main-element:hover {
+        .half {
+          .big-j {
+            mix-blend-mode: screen;
+            opacity:0.5;
+          }
+          .big-b {
+            mix-blend-mode: screen;
+            opacity:0.5;
+          }
+          .header--webdev {
+            color: $base-blue;
+          }
+          .header--calligrapher {
+            color: $base-red;
+          }
+        }
+        .main-left {
+          background-image: url('../images/j.png');
+          background-size: 11.5rem auto;
+          background-position: 2rem 4.4rem;
+        }
+        .main-right {
+          background-image: url('../images/b.png');
+          background-size: 15.3rem auto;
+          background-position: 0.3rem 1.9rem;
+        }
+      }
+    }
+  }
+
+
+
   #header {
     background-size: auto 100%;
     background-position: right bottom;
     .header-top {
       &--pos {
-        top: 1%;
+        top: -40px;
       }
       &--left {
         &-avatar {
-          width: 100%;
-          margin-left: 25%;
+          width: 70%;
+          margin-left: 42.5%;
         }
         &-name {
+          font-size: 2.5rem;
           text-align: center;
-          padding-bottom: 20px;
+          padding-bottom: 10px;
           margin:auto;
-          margin-top: 50px;
+          margin-top: 40px;
           width: 150%;
         }
         &-occupation {
@@ -25,7 +109,7 @@
           font-size: 2.2rem;
           line-height: 2.6rem;
           margin-top: 10px;
-          margin-bottom: 60px;
+          margin-bottom: 40px;
         }
       }
       &--right {
@@ -35,17 +119,21 @@
           left: 50%;
           margin-left: -45%;
           width: 70%;
+          height: 60px;
+          &-button {
+            top: 35px;
+          }
         }
         .text-center {
           padding-top: 4%;
-          font-size: 2rem;
+          font-size: initial;
         }
       }
     }
   }
 
   #overview {
-    margin-top: -50vh;
+    margin-top: -85vh;
     padding-top: 450px;
     background-repeat: no-repeat;
     background-size: auto 100% ;
@@ -56,7 +144,7 @@
       height: auto;
       z-index: 0;
       .scroll-button {
-        margin-top: -435px;
+        margin-top: -200px;
       }
       &--pos {
 

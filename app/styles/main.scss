@@ -38,14 +38,15 @@ body {
   font-family: $arkhip;
   color: #fff;
   background-color: $base-grey;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 #jb {
   background: $base-grey;
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   .row{
-    position: absolute;
     width: 100%;
     margin-top: 0rem;
     .main-element {
@@ -57,18 +58,22 @@ body {
           font-size: $big-text;
           color: $base-grey;
           text-shadow: $base-text-shadow;
+          // height: 65rem;
         }
         .big-j {
+          // width: 36rem;
+          float: right;
           letter-spacing: -55px;
-          transition: 0.5s;
         }
         .big-b {
+          // width: 47rem;
           margin-left: -55px;
+          float: left;
         }
         .header {
           color: $base-grey;
           text-shadow: $base-text-shadow;
-          margin-top: 60rem;
+          // margin-top: 60rem;
         }
         .header--webdev {
           padding-right: 15px;
@@ -81,63 +86,45 @@ body {
         z-index: 200;
         background-image: none;
         background-repeat: no-repeat;
-        background-position: 98% 97%;
-        transition: 0.5s;
+        background-position: -7rem 10.7rem;
+        transition: all 0.5s;
+        width: 36rem;
+        float: right;
+        margin-right: 10px;
       }
       .main-right {
         z-index: 190;
         background-image: none;
         background-repeat: no-repeat;
-        background-position: 3% 100%;
-        transition: 0.5s;
+        background-position: 1.3rem 1.5rem;;
+        transition: all 0.5s;
 
       }
     }
-    .element--hover {
+    .main-element:hover {
       .half {
         .big-j {
           mix-blend-mode: screen;
           opacity:0.5;
-          transition: 0.5s;
         }
         .big-b {
           mix-blend-mode: screen;
           opacity:0.5;
-          transition: 0.5s;
         }
         .header--webdev {
           color: $base-blue;
-          transition: 0.5s;
         }
         .header--calligrapher {
           color: $base-red;
-          transition: 0.5s;
         }
       }
       .main-left {
         background-image: url('../images/j.png');
-        background-position: 98% 97%;
-        transition: 0.5s;
+        background-position: -7rem 10.7rem;
       }
       .main-right {
         background-image: url('../images/b.png');
-        background-repeat: no-repeat;
-        background-position: 3% 100%;
-        transition: 0.5s;
-      }
-    }
-    .element--click {
-      .half {
-        .big-j {
-          mix-blend-mode: overlay;
-          opacity: 0.8;
-          transition: 0.5s;
-        }
-        .big-b {
-          mix-blend-mode: overlay;
-          opacity: 0.8;
-          transition: 0.5s;
-        }
+        background-position: 1.3rem 1.5rem;
       }
     }
   }
@@ -562,25 +549,20 @@ body {
         border-right: 3px solid #fff;
         padding-top: 3.2rem;
         font-size: 7rem;
-        transition: background-color 0.3s ease-out, padding-top 0.2s ease-out, font-size 0.25s ease-out;
-      }
-      &-icn:hover {
-        padding-top: 3rem;
-        padding-left: -0.3rem;
-        font-size: 8rem;
+        transition: background-color 0.3s ease-out, font-size 0.25s ease-out;
+        cursor: pointer;
       }
       .active {
-        padding-top: 2.8rem;
+        padding-top: 2.9rem;
         background-color: $base-red;
         border-left: 3px solid #fff;
         border-top: 3px solid #fff;
         border-bottom: 3px solid #fff;
         border-right: none !important;
-        font-size: 8rem;
       }
-      .active:hover {
-        padding-top: 2.8rem;
-      }
+      // .active:hover {
+      //   padding-top: 2.8rem;
+      // }
 
     }
     &-content {
