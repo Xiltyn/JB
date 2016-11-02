@@ -677,7 +677,7 @@ function showQuote() {
           var widthMobile = 100 / $webNum * 2 + '%'
           var $th = $(this);
 
-          enquire.register("screen and (min-width:600px)", {
+          enquire.register('screen and (min-width:600px)', {
               match : function() {
                 $th.css('width', width)
               }
@@ -690,7 +690,7 @@ function showQuote() {
           var width = 100 / $desNum + '%'
           var $th = $(this);
 
-          enquire.register("screen and (min-width:600px)", {
+          enquire.register('screen and (min-width:600px)', {
               match : function() {
                 $th.css('width', width)
               }
