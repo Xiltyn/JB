@@ -287,6 +287,7 @@ body {
       height: 180px;
       top: 50%;
       margin-top:-90px;
+      pointer-events: none;
     }
     &--left {
       z-index: 5;
@@ -314,6 +315,7 @@ body {
     }
     &--right {
       z-index: 5;
+      pointer-events: all;
       &--dummy {
         position: relative;
         width: 300px;
@@ -372,7 +374,7 @@ body {
   .overview-wrapper {
     padding: 50px 0 200px 0;
     text-align: justify;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 0;
     .scroll-button {
       margin-top: -450px;
@@ -441,7 +443,8 @@ body {
       padding: 0 15px;
     }
     &--background {
-      height: 300px;
+      min-height: 300px;
+      padding-bottom: 20px;
       -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.92);
       -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.92);
       box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.92);
@@ -457,8 +460,7 @@ body {
         margin: 0;
         .el {
           height: 160px;
-          padding: 5px 3%;
-          width: 20%;
+          padding: 5px 1%;
           &--bar {
             position: relative;
             // background-color: rgba(255, 255, 255, 0.5);

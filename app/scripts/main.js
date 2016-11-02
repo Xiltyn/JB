@@ -674,10 +674,27 @@ function showQuote() {
 
         $webdevSkills.each(function() {
           var width = 100 / $webNum + '%'
+          var widthMobile = 100 / $webNum * 2 + '%'
           var $th = $(this);
 
+          enquire.register("screen and (min-width:600px)", {
+              match : function() {
+                $th.css('width', width)
+              }
+          });
+
           // console.log(width);
-          $th.css('width', width)
+          // $th.css('width', width)
+        })
+        $designSkills.each(function() {
+          var width = 100 / $desNum + '%'
+          var $th = $(this);
+
+          enquire.register("screen and (min-width:600px)", {
+              match : function() {
+                $th.css('width', width)
+              }
+          });
         })
       }
 
@@ -772,7 +789,7 @@ function showQuote() {
         render(success);
         showSkills();
         showSkillName();
-        setElementWidth();
+        // setElementWidth();
       }
 
       // Callback function called when objects fail to be loaded
