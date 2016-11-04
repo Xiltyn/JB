@@ -851,10 +851,10 @@ function showQuote() {
   // ============================================================::||:>
 
   function initializeFooter() {
-    $("#socials").jsSocials({
+    $('#socials').jsSocials({
     showLabel: false,
     showCount: false,
-    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+    shares: ['email', 'twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'stumbleupon', 'whatsapp']
 });
   }
 
