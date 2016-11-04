@@ -69,15 +69,20 @@ body {
           float: left;
         }
         .header {
-          color: $base-grey;
           text-shadow: $base-text-shadow;
           // margin-top: 60rem;
         }
         .header--webdev {
+          color: $base-blue;
+          opacity: 0;
           padding-right: 15px;
+          animation: blink 2s linear infinite;
         }
         .header--calligrapher {
+          color: $base-red;
+          opacity: 0;
           padding-left: 15px;
+          animation: blink 2s linear infinite;
         }
      }
       .main-left {
@@ -110,10 +115,10 @@ body {
           opacity:0.5;
         }
         .header--webdev {
-          color: $base-blue;
+          opacity: 1;
         }
         .header--calligrapher {
-          color: $base-red;
+          opacity: 1;
         }
       }
       .main-left {
