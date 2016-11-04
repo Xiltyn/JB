@@ -846,6 +846,23 @@ function showQuote() {
       onScrollEffect(offsetElement, effectElement, effect)
     }
 
+  // ============================================================::||:>
+  // ======================= F O O T E R ========================::||:>
+  // ============================================================::||:>
+
+  function initializeFooter() {
+    $("#socials").jsSocials({
+    showLabel: false,
+    showCount: false,
+    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+});
+  }
+
+ initializeFooter();
+
+
+
+
 
 
 // Global callbacks

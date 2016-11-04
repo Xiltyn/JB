@@ -997,7 +997,7 @@ body {
 }
 
 #footer {
-  height: 300px;
+  // height: 300px;
   background-color: $base-grey;
   .jb-logo {
     position: absolute;
@@ -1014,6 +1014,78 @@ body {
       text-align: center;
       font-size: 15rem;
       letter-spacing: -2.8rem;
+    }
+  }
+  #socials {
+    margin-top: 40px;
+    .jssocials-share-link {
+      border-radius: 50%;
+      font-size: 2rem;
+      margin: 0 3px;
+      background-color: $light-grey;
+      color: $base-grey;
+      transition: all 0.3s ease-out;
+    }
+    .jssocials-share-link:hover {
+      background-color: #fff;
+    }
+  }
+  #breadcrumb {
+    margin: 30px 0;
+    font-size: $breadcrumb-text;
+    .breadcrumb-el {
+      h4 {
+        font-size: $breadcrumb-text;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+      }
+      ul {
+        list-style: none;
+        padding: 10px 0;
+        li {
+          cursor: pointer;
+          span {
+            opacity: 0.3;
+            transition: all 0.3s ease-out;
+          }
+        }
+        li:hover {
+          span {
+            opacity: 1;
+          }
+        }
+      }
+      .breadcrumb-el-contact {
+        li:nth-child(1) {
+          span {
+            padding-left: 25px;
+          }
+        }
+        li:nth-child(2) {
+          span {
+            padding-left: 30px;
+          }
+        }
+        li:nth-child(3) {
+          span:nth-child(1) {
+            padding-left: 10px;
+          }
+          span:nth-child(3) {
+            padding-left: 75px;
+          }
+          span:nth-child(5) {
+            padding-left: 75px;
+          }
+        }
+      }
+    }
+  }
+  .copyrights {
+    height: 50px;
+    .copyrights-txt {
+      border-top: 1px solid $light-grey;
+      padding-top: 10px;
+      color: $light-grey;
     }
   }
 }

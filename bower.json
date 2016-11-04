@@ -6,7 +6,8 @@
     "modernizr": "~2.8.1",
     "hover": "^2.0.2",
     "underscore": "^1.8.3",
-    "enquire": "^2.1.2"
+    "enquire": "^2.1.2",
+    "jssocials": "^1.4.0"
   },
   "overrides": {
     "bootstrap-sass": {
