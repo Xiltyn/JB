@@ -325,11 +325,11 @@
         &-wrapper {
           padding: 5px;
           &--img {
-            height: 40%;
+            max-height: 45%;
             img {
               margin-top: 0;
-              width: auto;
-              height: 100%;
+              width: 100%;
+              height: auto;
             }
           }
           &--text {

@@ -381,7 +381,7 @@ function showQuote() {
       $projectElements.on('click', function(event) {
         var $th       = $(this);
         var $name     = $th.find('.project-el--thumb-overlay h3').text();
-        var $desc     = $th.find('.project-el--thumb-overlay p').text();
+        var $desc     = $th.find('.project-el--thumb-overlay p').html();
         var $imgSrc   = $th.find('.project-el--thumb img').attr('data-bigSrc');
         var $repo     = $th.find('.project-el--thumb img').attr('data-repo');
         var $id       = $th.find('.project-el--thumb img').attr('data-id');

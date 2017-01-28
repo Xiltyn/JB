@@ -3,198 +3,198 @@
     {
       "id": 1,
       "category": "webdev",
-      "name": "Project 1",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "name": "Opti-Tool",
+      "desc": "Online tool for content optimization. <br><br> It's main purpose was to create a closed group of users who would have access to content specified by the Community Manager. Additionally, by counting scores of every participant, I was able to create different rankings as well as automated achievements rendered in the tool for each of the users. <br><br>This project resulted in boosting traffic share from optimised content up to 60% overall. ",
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_1.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_2.jpg"
+            "img": "opti-tool_2.jpg"
           },
           {
             "id": 3,
-            "img": "project_3.jpg"
+            "img": "opti-tool_3.jpg"
+          },
+          {
+            "id": 4,
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     },
     {
       "id": 2,
       "category": "webdev",
-      "name": "Project 2",
+      "name": "DeepAuto",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_2.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_3.jpg"
+            "img": "opti-tool_2.jpg"
           },
           {
             "id": 3,
-            "img": "project_5.jpg"
+            "img": "opti-tool_3.jpg"
+          },
+          {
+            "id": 4,
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     },
     {
       "id": 3,
       "category": "webdev",
-      "name": "Project 3",
+      "name": "Ink-ki",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_3.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_4.jpg"
+            "img": "opti-tool_2.jpg"
+          },
+          {
+            "id": 3,
+            "img": "opti-tool_3.jpg"
+          },
+          {
+            "id": 4,
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     },
     {
       "id": 4,
       "category": "webdev",
-      "name": "Project 4",
+      "name": "Brainly.in Blog",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_4.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_2.jpg"
+            "img": "opti-tool_2.jpg"
           },
           {
             "id": 3,
-            "img": "project_1.jpg"
+            "img": "opti-tool_3.jpg"
           },
           {
             "id": 4,
-            "img": "project_7.jpg"
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     },
     {
       "id": 5,
       "category": "webdev",
-      "name": "Project 5",
+      "name": "Landing Pages",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_5.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_6.jpg"
+            "img": "opti-tool_2.jpg"
           },
           {
             "id": 3,
-            "img": "project_7.jpg"
+            "img": "opti-tool_3.jpg"
+          },
+          {
+            "id": 4,
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     },
     {
       "id": 6,
       "category": "design",
-      "name": "Project 6",
+      "name": "Promotional materials" ,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_6.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_7.jpg"
+            "img": "opti-tool_2.jpg"
+          },
+          {
+            "id": 3,
+            "img": "opti-tool_3.jpg"
+          },
+          {
+            "id": 4,
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     },
     {
       "id": 7,
       "category": "design",
-      "name": "Project 7",
+      "name": "UX/UI elements",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
+      "pics": {
+        "pic": [
           {
             "id": 1,
-            "img": "project_7.jpg"
+            "img": "opti-tool_1.jpg"
           },
           {
             "id": 2,
-            "img": "project_4.jpg"
+            "img": "opti-tool_2.jpg"
           },
           {
             "id": 3,
-            "img": "project_2.jpg"
+            "img": "opti-tool_3.jpg"
           },
           {
             "id": 4,
-            "img": "project_8.jpg"
+            "img": "opti-tool_4.jpg"
           }
         ]
       },
-      "repo": "#"
-    },
-    {
-      "id": 8,
-      "category": "calligraphy",
-      "name": "Project 8",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "pics":
-      {
-        "pic":
-        [
-          {
-            "id": 1,
-            "img": "project_8.jpg"
-          },
-          {
-            "id": 2,
-            "img": "project_3.jpg"
-          }
-        ]
-      },
-      "repo": "#"
+      "repo": "#",
+      "demo": "#"
     }
   ]
 }
