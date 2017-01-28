@@ -3,79 +3,79 @@
     {
       "id": 1,
       "name": "HTML5",
-      "level": 90,
+      "level": 95,
       "category": "webdev",
-      "imgSrc": "html.png"
+      "imgSrc": "html.svg"
     },
     {
       "id": 2,
       "name": "CSS3",
       "level": 80,
       "category": "webdev",
-      "imgSrc": "css3.png"
+      "imgSrc": "css.svg"
     },
     {
       "id": 3,
-      "name": "jQuery",
+      "name": "JavaScript/ES6",
       "level": 40,
       "category": "webdev",
-      "imgSrc": "jquery.png"
+      "imgSrc": "javascript.svg"
     },
     {
       "id": 4,
-      "name": "GIT",
-      "level": 60,
+      "name": "jQuery",
+      "level": 75,
       "category": "webdev",
-      "imgSrc": "git.png"
+      "imgSrc": "jquery.svg"
     },
     {
       "id": 5,
-      "name": "WordPress",
+      "name": "GIT",
       "level": 60,
       "category": "webdev",
-      "imgSrc": "wordpress.png"
+      "imgSrc": "git.svg"
     },
     {
       "id": 6,
       "name": "Photoshop",
-      "level": 90,
+      "level": 95,
       "category": "design",
-      "imgSrc": "ps.png"
+      "imgSrc": "photoshop.svg"
     },
     {
       "id": 7,
       "name": "Illustrator",
       "level": 60,
       "category": "design",
-      "imgSrc": "ai.png"
+      "imgSrc": "illustrator.svg"
     },
     {
       "id": 8,
-      "name": "Lightroom",
-      "level": 85,
+      "name": "Premiere Pro",
+      "level": 70,
       "category": "design",
-      "imgSrc": "lr.png"
+      "imgSrc": "premiere.svg"
     },
     {
       "id": 9,
-      "name": "InDesign",
-      "level": 30,
+      "name": "Sketch",
+      "level": 70,
       "category": "design",
-      "imgSrc": "id.png"
+      "imgSrc": "Sketch.svg"
     },
     {
       "id": 10,
       "name": "RWD",
       "level": 75,
       "category": "design",
-      "imgSrc": "rwd.png"
+      "imgSrc": "rwd.svg"
     },
     {
       "id": 11,
-      "name": "Bootstrap",
-      "level": 40,
+      "name": "SASS",
+      "level": 90,
       "category": "webdev",
-      "imgSrc": "bootstrap.png"
+      "imgSrc": "sass.svg"
     }
   ]
 }
