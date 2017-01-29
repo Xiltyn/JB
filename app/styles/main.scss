@@ -327,6 +327,9 @@ body {
       &-occupation {
         margin-top: 10px;
         margin-left: 30px;
+        span {
+          font-family: $arkhip;
+        }
       }
     }
     &--right {
