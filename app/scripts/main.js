@@ -313,6 +313,7 @@ function showQuote() {
           name: element.name,
           desc: element.desc,
           repo: element.repo,
+          demo: element.demo,
           thumb: element.pics.pic[0].img
         }));
         // console.log(pics);
@@ -329,6 +330,7 @@ function showQuote() {
       var offsetElement = $('#projects');
       var elementGroupOne = $('.project-el');
       var elementGroupTwo = $('.category-btn');
+      var defaultBtn = $('.all-btn');
 
       $(window).scroll( {previousTop: 0},
         function() {
@@ -352,6 +354,7 @@ function showQuote() {
                 var element = $(this);
                 setTimeout(function() {
                   element.addClass('inactive');
+                  defaultBtn.addClass('active');
                 }, 150*i);
               });
             }
@@ -367,16 +370,16 @@ function showQuote() {
     // Open lightbox on click
     // ==========================================================::||:>
     function showLightbox(data) {
-      var lightbox = $('.lightbox');
-      var lightboxTxt = $('.lightbox-wrapper--text');
-      var lightboxImg = $('.lightbox-wrapper--img');
-      var lightboxMin = $('.lightbox-miniatures');
-      var spinner = $('.spinner');
-      var objects = data.projects;
-
-      function hideLoader() {
-
-      }
+      var lightbox          = $('.lightbox');
+      var lightboxTxt       = $('.lightbox-wrapper--text');
+      var lightboxImg       = $('.lightbox-wrapper--img');
+      var lightboxImgFull   = $('.fullImage');
+      var lightboxMin       = $('.lightbox-miniatures');
+      var lightboxDemo      = $('.demoBtn');
+      var lightboxRepo      = $('.repoBtn');
+      var $lightboxBtns     = $('.btn-sq');
+      var spinner           = $('.spinner');
+      var objects           = data.projects;
 
       $projectElements.on('click', function(event) {
         var $th       = $(this);
@@ -384,18 +387,26 @@ function showQuote() {
         var $desc     = $th.find('.project-el--thumb-overlay p').html();
         var $imgSrc   = $th.find('.project-el--thumb img').attr('data-bigSrc');
         var $repo     = $th.find('.project-el--thumb img').attr('data-repo');
+        var $demo     = $th.find('.project-el--thumb img').attr('data-demo');
         var $id       = $th.find('.project-el--thumb img').attr('data-id');
+        var active    = {'opacity': 1};
+        var inactive  = {'opacity': 0};
 
         console.log($id);
 
         lightbox.addClass('animated fadeIn').css('pointer-events', 'all');
 
         setTimeout(function() {
-          spinner.css('opacity', '0');
+          spinner.css(inactive);
 
           setTimeout(function() {
+
             lightboxImg.html('<img src="' + $imgSrc + '" alt="' + $name + '" />');
             lightboxTxt.html('<h3>' + $name + '</h3><p>' + $desc + '</p>');
+            lightboxDemo.attr('href', $demo);
+            lightboxRepo.attr('href', $repo);
+            lightboxImgFull.attr('href', $imgSrc);
+            $lightboxBtns.css(active);
             objects.forEach(function(element) {
               if (element.id == $id) {
                 var pics = element.pics.pic;
@@ -412,7 +423,17 @@ function showQuote() {
               $thumbs.on('click', function() {
                 var url = $(this).find('img').attr('src');
                 var split = url.split('/');
-                lightboxImg.html('<img src="images/gallery/' + split[3] + '" />');
+                lightboxImg.css(inactive);
+                spinner.css(active);
+                setTimeout(function () {
+                  spinner.css(inactive);
+                  setTimeout(function () {
+                    lightboxImg.css(active);
+                    lightboxImg.html('<img src="images/gallery/' + split[3] + '" />');
+                    lightboxImgFull.attr('href', 'images/gallery/' + split[3]);
+                  }, 300);
+                }, 1000);
+
               });
             }, 100);
           }, 300);
@@ -423,7 +444,8 @@ function showQuote() {
           lightboxImg.html('');
           lightboxTxt.html('');
           lightboxMin.html('');
-          spinner.css('opacity', '1');
+          spinner.css(active);
+          $lightboxBtns.css(inactive);
           $('body').removeClass('stop-scrolling');
         })
 

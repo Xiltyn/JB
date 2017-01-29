@@ -803,7 +803,7 @@ body {
         .spinner {
           position: absolute;
           width: 100%;
-          height: 100%;
+          height: 65%;
           z-index: 1000;
           top: 0;
           left: 0;
@@ -837,6 +837,8 @@ body {
             margin: 5px auto;
             padding: 1rem;
             cursor: pointer;
+            opacity: 0;
+            transition: 0.3s all ease-out;
             &--hole {
               text-align: center;
               font-size: 1.7rem;
