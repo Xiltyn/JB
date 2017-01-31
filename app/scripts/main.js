@@ -449,6 +449,18 @@ function showQuote() {
           $('body').removeClass('stop-scrolling');
         })
 
+        if ($demo == '#') {
+          lightboxDemo.hide();
+        } else {
+          lightboxDemo.show();
+        }
+
+        if ($repo == '#') {
+          lightboxRepo.hide();
+        } else {
+          lightboxRepo.show();
+        }
+
         // disable scrolling on body
         // ======================================================::||:>
         if ($('body').hasClass('stop-scrolling')) {
@@ -458,6 +470,9 @@ function showQuote() {
         }
 
       })
+
+
+
     }
 
     function toggleCategory() {

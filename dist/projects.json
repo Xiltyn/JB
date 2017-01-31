@@ -32,108 +32,86 @@
       "id": 2,
       "category": "webdev",
       "name": "DeepAuto",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "One of my latest projects. DeepAuto is a front, info website for a small business car seller.<br><br>I used WordPress as an engine and built the front-end side from scratch. Site's features include:<br>- carousel slider showcasing latest offers on the main page<br>- offers page with all the necessary details<br>- lightbox gallery on single offer pages<br>- contact page with google maps localisation<br>- about us page  ",
       "pics": {
         "pic": [
           {
             "id": 1,
-            "img": "opti-tool_1.jpg"
+            "img": "deepauto_1.gif"
           },
           {
             "id": 2,
-            "img": "opti-tool_2.jpg"
+            "img": "deepauto_2.jpg"
           },
           {
             "id": 3,
-            "img": "opti-tool_3.jpg"
+            "img": "deepauto_3.jpg"
           },
           {
             "id": 4,
-            "img": "opti-tool_4.jpg"
+            "img": "deepauto_4.jpg"
+          },
+          {
+            "id": 5,
+            "img": "deepauto_5.jpg"
+          },
+          {
+            "id": 6,
+            "img": "deepauto_6.jpg"
+          },
+          {
+            "id": 7,
+            "img": "deepauto_7.jpg"
           }
         ]
       },
-      "repo": "#",
-      "demo": "#"
+      "repo": "https://github.com/Xiltyn/deepauto",
+      "demo": "http://deepauto.pl"
     },
     {
       "id": 3,
       "category": "webdev",
-      "name": "Ink-ki",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "name": "#shinjuku",
+      "desc": "WordPress blog theme.<br><br>Designed and coded for a Japanese studies students' project, which unfortunately, never came into fruition. It's a minimal design trying to find a middle ground between Japanese aesthetics and modern look.<br><br>Unfortunately, I am still working on a showcasing platform for my WordPress projects, so until then, Live demo only showcases the Home Page for the project #shinjuku. ",
       "pics": {
         "pic": [
           {
             "id": 1,
-            "img": "opti-tool_1.jpg"
-          },
-          {
-            "id": 2,
-            "img": "opti-tool_2.jpg"
-          },
-          {
-            "id": 3,
-            "img": "opti-tool_3.jpg"
-          },
-          {
-            "id": 4,
-            "img": "opti-tool_4.jpg"
+            "img": "noshow.jpg"
           }
         ]
       },
-      "repo": "#",
-      "demo": "#"
+      "repo": "https://github.com/Xiltyn/shinjuku",
+      "demo": "http://xiltyn.github.io/shinjuku/"
     },
     {
       "id": 4,
       "category": "webdev",
       "name": "Brainly.in Blog",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "Another WordPress blog theme I had a chance to create.<br><br>This particular project's goal was to create a branded medium for brainly.in for publishing market related stories, interview's with users, etc. It's main purpose was to drive market awareness and build trust.<br><br>Among others, it features different WordPress loops for showcasing different categories of posts on separate pages. This solution let me create specialised pages for some particular SEO-related tests we were performing at that time.",
       "pics": {
         "pic": [
           {
             "id": 1,
-            "img": "opti-tool_1.jpg"
-          },
-          {
-            "id": 2,
-            "img": "opti-tool_2.jpg"
-          },
-          {
-            "id": 3,
-            "img": "opti-tool_3.jpg"
-          },
-          {
-            "id": 4,
-            "img": "opti-tool_4.jpg"
+            "img": "noshow.jpg"
           }
         ]
       },
       "repo": "#",
-      "demo": "#"
-    },
-    {
-      "id": 5,
+      "demo": "http://blog.brainly.in"
+    }
+  ],
+  "projects_tobe": [
+      {
+      "id": 1,
       "category": "webdev",
       "name": "Landing Pages",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "During my work as a marketing specialist, I was often asked to create campaigns for social media, adWords and others. In order to boost my results, I would end up creating my own landing pages.<br><br>Here, you can find shots of some of them as it was impossible to scramble them all. All of them were made with help of unbounce and code snippets I made.<br><br>One of the most interesting landing pages however, was able to aggregate contents of educational questions asked by users and send them to a spreadsheet using external API.",
       "pics": {
         "pic": [
           {
             "id": 1,
-            "img": "opti-tool_1.jpg"
-          },
-          {
-            "id": 2,
-            "img": "opti-tool_2.jpg"
-          },
-          {
-            "id": 3,
-            "img": "opti-tool_3.jpg"
-          },
-          {
-            "id": 4,
-            "img": "opti-tool_4.jpg"
+            "img": "noshow.jpg"
           }
         ]
       },
@@ -143,25 +121,13 @@
     {
       "id": 6,
       "category": "design",
-      "name": "Promotional materials" ,
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "name": "Promotional materials",
+      "desc": "Promotional materials based on branding.<Br><br>Over the years I created countless ad campaigns, social media posts, designed landing pages and more. I can not only tailor an advertisement to a certain branding but also, advise on the approach of your campaign towards the target.<br><br>Here, I am showacasing only a couple examples of my work.",
       "pics": {
         "pic": [
           {
             "id": 1,
-            "img": "opti-tool_1.jpg"
-          },
-          {
-            "id": 2,
-            "img": "opti-tool_2.jpg"
-          },
-          {
-            "id": 3,
-            "img": "opti-tool_3.jpg"
-          },
-          {
-            "id": 4,
-            "img": "opti-tool_4.jpg"
+            "img": "noshow.jpg"
           }
         ]
       },
@@ -169,27 +135,15 @@
       "demo": "#"
     },
     {
-      "id": 7,
+      "id": 2,
       "category": "design",
       "name": "UX/UI elements",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "Working with an internet based product for a couple of years I really took to data driven design and user interactions. I grew aware of how small changes can trigger great changes.<Br><br>Since then, I was taking a shot a UI/UX design myself, either with the websites I was creating or with some product ideas of my own<br><br>You can check them out here and if you like them, consider dropping me a line ;)",
       "pics": {
         "pic": [
           {
             "id": 1,
-            "img": "opti-tool_1.jpg"
-          },
-          {
-            "id": 2,
-            "img": "opti-tool_2.jpg"
-          },
-          {
-            "id": 3,
-            "img": "opti-tool_3.jpg"
-          },
-          {
-            "id": 4,
-            "img": "opti-tool_4.jpg"
+            "img": "noshow.jpg"
           }
         ]
       },
